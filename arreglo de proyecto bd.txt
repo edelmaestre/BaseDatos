@@ -1,0 +1,5 @@
+-cual es el restaurante que mas tiene reserva?
+-atributo Mesa(40)
+-atributo mesasOcupadas-->Disparador Voy descontando
+-borrar funcion eliminar
+-

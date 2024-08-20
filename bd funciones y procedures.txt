@@ -1,0 +1,37 @@
+SET SERVEROUTPUT ON
+
+declare
+
+
+
+begin 
+mensaje:='Bienvenido';
+DBMS_OUTPUT.PUT_LINE(mensaje);
+end;
+
+begin 
+for  n in 1..10 loop
+  
+  if n>5 then
+   DBMS_OUTPUT.PUT_LINE(n);
+  end loop
+end loop;
+end;
+
+
+
+declare
+cursor nomCursor is sql;
+cursor nomCursor is select(first_name from employees where department_id=100; 
+
+begin
+ for 
+end;
+
+declare
+xape employees.last_name%type;
+xnom employees.first_name%type;
+xsal employees.first_name%type
+begin
+ select last_name, 
+end;
