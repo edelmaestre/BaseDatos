@@ -1,0 +1,111 @@
+
+BASE DE DATOS <<...ORACLE...>>
+1. entramoes al CMD
+2. SQLPLUS/NOLOG
+3. CONNECT USUARIO/CLAVE;  --->   (system/unicesar2015)
+------------------------------------------------------------------------------------------------------------------------------------------------
+creaemos el tablespace 
+4. create tablespace EJERCICIO datafile 'C:\oraclexe\app\oracle\oradata\XE\DFEJERCICIO.ora' size 25M;
+------------------------------------------------------------------------------------------------------------------------------------------------
+creamos al usuario
+5. create user ALEXORTIZ identified by ALEXORTIZ default tablespace EJERCICIO temporary tablespace TEMP profile default quota unlimited on EJERCICIO;
+-------------------------------------------------------------------------------------------------------------------------------------------------
+6. create role ROLEJERCICIO;
+--------------------------------------------------------------------------------------------------------------------------------------------------
+7.role para el usuario:
+      GRANT create SESSION  to frank;  
+      grant create ANY OPERATOR to ROLEJERCICIO;
+      grant create ANY PROCEDURE  to ROLEJERCICIO;   
+      grant create ROLE to ROLEJERCICIO; 
+      grant create SYNONYM to ROLEJERCICIO;   
+      grant create TABLE to ROLEJERCICIO;
+      grant create USER to ROLEJERCICIO;
+      grant create TABLESPACE to ROLEJERCICIO;
+      grant drop USER to ROLEJERCICIO;
+      grant drop TABLESPACE to ROLEJERCICIO;
+      grant drop ANY TABLE to ROLEJERCICIO;
+      grant drop ANY ROLE to ROLEJERCICIO;
+      grant alter ANY PROCEDURE to ROLEJERCICIO;
+      grant alter ANY ROLE to ROLEJERCICIO;
+      grant alter ANY TABLE to ROLEJERCICIO;
+      grant alter USER to ROLEJERCICIO;
+      grant insert ANY TABLE to ROLEJERCICIO;
+8.grant ROLEJERCICIO to ALEXORTIZ; 
+------------------------------------------------------------------------------------------------------------------------------------------------
+9. connect ALEXORTIZ/ALEXORTIZ;
+<<...SENTENCIAS...>>
+-------------------------------------------------------------------------------------------------------------------------------------------------
+// CREAR TABLA
+-->  create TABLE ALUMNOS(cedula varchar2(10) primary key, nombre varchar2(10), edad number(3)); 
+------------------------------------------------------------------------------------------------------------------------------------------------
+// HACER UNA CONSULTA 
+-->  select cedula,nombre from ALUMNOS where edad='19';
+------------------------------------------------------------------------------------------------------------------------------------------------
+// ELIMINAR 
+-->  delete from ALUMNOS where edad='19';
+------------------------------------------------------------------------------------------------------------------------------------------------
+// ACTUALIZAR
+-->  update ALUMNOS set nombre='rafael' where edad='19';
+-------------------------------------------------------------------------------------------------------------------------------------------------
+// INSERTAR DATOS EN LA TABLA
+-->  insert into ALUMNOS(cedula,nombre,edad) values ('123456','alex','19');
+-------------------------------------------------------------------------------------------------------------------------------------------------
+// PARA ASIGNAR LLAVE PRIMARIA CUANDO YA SE CREO LA TABLA
+-->  ALTER table PROGRAMA add constraint pkprograma primary key (cod);            
+--------------------------------------------------------------------------------------------------------------------------------------------------
+// PARA CONSULTAR CUANDO HEMOS CREADO LA LLAVE FORANEA DE DOS TABLAS
+-->  SELECT alumnos.cedula,alumnos.nombre,alumnos.edad,programas.nombre 
+     FROM alumnos INNER JOIN programas ON alumnos.codprograma=programas.cod where programas.cod='123';
+--------------------------------------------------------------------------------------------------------------------------------------------------
+// PARA CREAR LLAVE FORANEA
+-->  
+ALTER TABLE alumnos 
+ADD CONSTRAINT fkcodprograma FOREIGN KEY (codprograma) REFERENCES programas (cod); 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+// CONSULTA EN VARIAS TABLAS CON INNER JOIN
+-->  SELECT alumnos.cedula, programa.nombre, ciudad.nombre FROM alumnos INNER JOIN alumnos.codprogama=programa.cod
+     INNER JOIN  alumnos.codciudad=ciudad.cod where ciudad.nombre='valledupar';                                                                  
+--------------------------------------------------------------------------------------------------------------------------------------------------
+// SUBCONSULTA
+-->  SELECT Apellido, Nombre, Titulo, Salario FROM Empleados AS T1 WHERE Salario >= (SELECT Avg(Salario) FROM Empleados 
+    WHERE T1.Titulo = Empleados.Titulo) ORDER BY Titulo;
+--------------------------------------------------------------------------------------------------------------------------------------------------
+// CREAR SECUENCIA
+-->  create sequence NOMBRE_SECUENCIA increment by 1 star with 01;
+-->  insert into libro values (NOMBRE_SECUENCIA.nextval, 'el loco');
+--------------------------------------------------------------------------------------------------------------------------------------------------
+// AGRUPADORES
+-->  SELECT */ columna1, columna2,....
+FROM nombre-tabla   
+[WHERE condición]
+              
+[GROUP BY columna1, columna2.... ]
+
+              [HAVING condición-selección-grupos ]
+
+              [ORDER BY columna1 [DESC], columna2 [DESC]... ]
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+// AÑADIR COLUMNAS A UNA TABLA
+-->  ALTER TABLE nombre_tabla ADD (atributo1, atributo2);
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

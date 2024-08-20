@@ -1,0 +1,97 @@
+SQL> conn system/system;
+Conectado.
+-------------------------------------------------
+SQL> alter session set container=xepdb1; //conectarse a la pdb
+
+Sesión modificada.
+
+SQL> create tablespace NombreTablespaceEjemplo datafile 'C:\Oracle18c-XE\oradata\XE\NombreDatafileEjemplo.dbf' size 50 M; //para crear la tablespace
+
+Tablespace creado.
+
+SQL> create user usuario1 identified by 123 default tablespace NombreTablespaceEjemplo temporary tablespace temp quota unlimited on NombreTablespaceEjemplo; //para crear usuario.
+
+Usuario creado.
+                                                                              
+SQL> select username from dba_users where username='USUARIO1';//Mostrar usuario creado --  solo muestra este --
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+USUARIO1                                                                        
+
+SQL> clear screen
+
+********************************************************************************
+ 									       *
+SQL> grant CREATE SESSION,CREATE TABLE,CREATE PUBLIC SYNONYM TO usuario1;      *
+									       *
+Concesión terminada correctamente.					       *
+********************************************************************************
+SQL> conn usuario1/123@localhost:1521/xepdb1;
+Conectado.
+SQL> create table TablaAlumno(
+  2  cedula varchar2(20) not null,
+  3  nombre varchar2(20) not null,
+  4  apellido varchar2(20) not null
+  5  );
+
+Tabla creada.
+
+SQL> insert into TablaAlumno (cedula,nombre,apellido) values ('1065555555','pedro','coleto');
+
+1 fila creada.
+
+SQL> insert into TablaAlumno (cedula,nombre,apellido) values ('1065555567','yuraima','fara');
+
+1 fila creada.
+
+SQL> select * from TablaAlumno;
+
+CEDULA               NOMBRE               APELLIDO                              
+-------------------- -------------------- --------------------                  
+1065555555           pedro                coleto                                
+1065555567           yuraima              fara                                  
+
+SQL> conn system/system;
+Conectado.
+SQL> alter session set container=xepdb1;
+
+Sesión modificada.
+
+SQL> create user usuario02 identified by 123 default tablespace NombreTablespaceEjemplo temporary tablespace temp quota unlimited on NombreTablespaceEjemplo; //crear usuario temporal sin limite (recuerda que este liminte es 14 gb por la version express. si fuese version paga seria el tamaño del disco)
+
+Usuario creado.
+
+SQL> grant CREATE SESSION,CREATE TABLE,CREATE PUBLIC SYNONYM TO usuario02; //dar permisos a usuario 2
+
+Concesión terminada correctamente.
+
+SQL> conn usuario02/123@localhost:1521/xepdb1;
+Conectado.
+SQL> conn usuario1/123@localhost:1521/xepdb1;
+Conectado.
+SQL> create public synonym SinonimoTablaAlumno for TablaAlumno;
+
+Sinónimo creado.
+
+SQL> grant select on TablaAlumno to usuario02; //dando permiso de consulta a usuario 2 solo de la tabla TablaAlumno
+
+Concesión terminada correctamente.
+
+SQL> conn usuario02/123@localhost:1521/xepdb1;
+Conectado.
+SQL> select * from TablaAlumno;
+select * from TablaAlumno
+              *
+ERROR en línea 1:
+ORA-00942: la tabla o vista no existe 
+
+
+SQL> select * from SinonimoTablaAlumno;
+
+CEDULA               NOMBRE               APELLIDO                              
+-------------------- -------------------- --------------------                  
+1065555555           pedro                coleto                                
+1065555567           yuraima              fara                                  
+
+SQL> spool off;

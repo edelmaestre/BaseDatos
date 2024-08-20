@@ -1,0 +1,2258 @@
+SQL> conn system/system;
+Conectado.
+SQL> CREATE TABLESPACE DATOS DATAFILE 'C:\Oracle18c-XE\oradata\XE\DATOS.dbf' SIZE 50M
+  2  \
+  3  CREATE TABLESPACE DATOS DATAFILE 'C:\Oracle18c-XE\oradata\XE\DATOS.dbf' SIZE 50M;
+\
+*
+ERROR en línea 2:
+ORA-00911: carácter no válido 
+
+
+SQL> CREATE TABLESPACE DATOS DATAFILE 'C:\Oracle18c-XE\oradata\XE\DATOS.dbf' SIZE 50M;
+
+Tablespace creado.
+
+SQL> ALTERT SESSION SET CONTAINER=XEPDB1;
+SP2-0734: inicio "ALTERT SES..." de comando desconocido - resto de la línea ignorado.
+SQL> ALTER SESSION SET CONTAINER=XEPDB1;
+
+Sesión modificada.
+
+SQL> CREATE TABLESPACE DATOS DATAFILE 'C:\Oracle18c-XE\oradata\XE\DATOS.dbf' SIZE 50M;
+CREATE TABLESPACE DATOS DATAFILE 'C:\Oracle18c-XE\oradata\XE\DATOS.dbf' SIZE 50M
+*
+ERROR en línea 1:
+ORA-01537: no se puede agregar el archivo 
+'C:\Oracle18c-XE\oradata\XE\DATOS.dbf' porque ya forma parte de la base de 
+datos 
+
+
+SQL> CREATE TABLESPACE DATOSS DATAFILE 'C:\Oracle18c-XE\oradata\XE\DATOSS.dbf' SIZE 50M;
+
+Tablespace creado.
+
+SQL> CRETE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS.dbf TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED;
+SP2-0734: inicio "CRETE USER..." de comando desconocido - resto de la línea ignorado.
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS.dbf TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED;
+CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS.dbf TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED
+                                                               *
+ERROR en línea 1:
+ORA-00922: falta la opción o no es válida 
+
+
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS.DBF TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED;
+CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS.DBF TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED
+                                                               *
+ERROR en línea 1:
+ORA-00922: falta la opción o no es válida 
+
+
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED;
+CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED
+                                                                                                                       *
+ERROR en línea 1:
+ORA-00969: falta la palabra clave ON 
+
+
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA ONLIMITED;
+CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA ONLIMITED
+                                                                                                               *
+ERROR en línea 1:
+ORA-02187: especificación de cuota no válida 
+
+
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED ON DATOS;
+CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED ON DATOS
+*
+ERROR en línea 1:
+ORA-00959: el tablespace 'TEM' no existe 
+
+
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE SATOS TEMPORARY  TABLESPACE TEMPORAL PROFULE DEFAULT QUOTA UNLIMITED ON DATOS;
+CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE SATOS TEMPORARY  TABLESPACE TEMPORAL PROFULE DEFAULT QUOTA UNLIMITED ON DATOS
+                                                                                              *
+ERROR en línea 1:
+ORA-00922: falta la opción o no es válida 
+
+
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE SATOS TEMPORARY  TABLESPACE TEMPORAL PROFILE DEFAULT QUOTA UNLIMITED ON DATOS;
+CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE SATOS TEMPORARY  TABLESPACE TEMPORAL PROFILE DEFAULT QUOTA UNLIMITED ON DATOS
+*
+ERROR en línea 1:
+ORA-00959: el tablespace 'SATOS' no existe 
+
+
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOS TEMPORARY  TABLESPACE TEMPORAL PROFILE DEFAULT QUOTA UNLIMITED ON DATOS;
+CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOS TEMPORARY  TABLESPACE TEMPORAL PROFILE DEFAULT QUOTA UNLIMITED ON DATOS
+*
+ERROR en línea 1:
+ORA-00959: el tablespace 'DATOS' no existe 
+
+
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY  TABLESPACE TEMPORAL PROFILE DEFAULT QUOTA UNLIMITED ON DATOSS;
+CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY  TABLESPACE TEMPORAL PROFILE DEFAULT QUOTA UNLIMITED ON DATOSS
+*
+ERROR en línea 1:
+ORA-00959: el tablespace 'TEMPORAL' no existe 
+
+
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY  TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED ON DATOSS;
+CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY  TABLESPACE TEM PROFILE DEFAULT QUOTA UNLIMITED ON DATOSS
+*
+ERROR en línea 1:
+ORA-00959: el tablespace 'TEM' no existe 
+
+
+SQL> CREATE USER ANDRES IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY  TABLESPACE TEMP PROFILE DEFAULT QUOTA UNLIMITED ON DATOSS;
+
+Usuario creado.
+
+SQL> SELECT USERNAME FROM dba-users;
+SELECT USERNAME FROM dba-users
+                        *
+ERROR en línea 1:
+ORA-00933: comando SQL no terminado correctamente 
+
+
+SQL> SELECT USERNAME FROM dba_users;
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+SYS                                                                             
+SYSTEM                                                                          
+XS$NULL                                                                         
+LBACSYS                                                                         
+OUTLN                                                                           
+DBSNMP                                                                          
+APPQOSSYS                                                                       
+DBSFWUSER                                                                       
+GGSYS                                                                           
+ANONYMOUS                                                                       
+HR                                                                              
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+CTXSYS                                                                          
+DVSYS                                                                           
+SI_INFORMTN_SCHEMA                                                              
+DVF                                                                             
+GSMADMIN_INTERNAL                                                               
+ORDPLUGINS                                                                      
+MDSYS                                                                           
+OLAPSYS                                                                         
+ORDDATA                                                                         
+XDB                                                                             
+WMSYS                                                                           
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+ORDSYS                                                                          
+GSMCATUSER                                                                      
+MDDATA                                                                          
+SYSBACKUP                                                                       
+REMOTE_SCHEDULER_AGENT                                                          
+PDBADMIN                                                                        
+GSMUSER                                                                         
+SYSRAC                                                                          
+OJVMSYS                                                                         
+AUDSYS                                                                          
+DIP                                                                             
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+SYSKM                                                                           
+ORACLE_OCM                                                                      
+SYS$UMF                                                                         
+SYSDG                                                                           
+ANDRES                                                                          
+
+38 filas seleccionadas.
+
+SQL> SELECT USERNAME,TABLESPACE FROM dba_users;
+SELECT USERNAME,TABLESPACE FROM dba_users
+                *
+ERROR en línea 1:
+ORA-00904: "TABLESPACE": identificador no válido 
+
+
+SQL> DESCRIBE DBA_USERS;
+ Nombre                                    ¿Nulo?   Tipo
+ ----------------------------------------- -------- ----------------------------
+ USERNAME                                  NOT NULL VARCHAR2(128)
+ USER_ID                                   NOT NULL NUMBER
+ PASSWORD                                           VARCHAR2(4000)
+ ACCOUNT_STATUS                            NOT NULL VARCHAR2(32)
+ LOCK_DATE                                          DATE
+ EXPIRY_DATE                                        DATE
+ DEFAULT_TABLESPACE                        NOT NULL VARCHAR2(30)
+ TEMPORARY_TABLESPACE                      NOT NULL VARCHAR2(30)
+ LOCAL_TEMP_TABLESPACE                              VARCHAR2(30)
+ CREATED                                   NOT NULL DATE
+ PROFILE                                   NOT NULL VARCHAR2(128)
+ INITIAL_RSRC_CONSUMER_GROUP                        VARCHAR2(128)
+ EXTERNAL_NAME                                      VARCHAR2(4000)
+ PASSWORD_VERSIONS                                  VARCHAR2(17)
+ EDITIONS_ENABLED                                   VARCHAR2(1)
+ AUTHENTICATION_TYPE                                VARCHAR2(8)
+ PROXY_ONLY_CONNECT                                 VARCHAR2(1)
+ COMMON                                             VARCHAR2(3)
+ LAST_LOGIN                                         TIMESTAMP(9) WITH TIME ZONE
+ ORACLE_MAINTAINED                                  VARCHAR2(1)
+ INHERITED                                          VARCHAR2(3)
+ DEFAULT_COLLATION                                  VARCHAR2(100)
+ IMPLICIT                                           VARCHAR2(3)
+ ALL_SHARD                                          VARCHAR2(3)
+
+SQL> DESCRIBE SYSTEM_PRIVILEGE_MAP;
+ Nombre                                    ¿Nulo?   Tipo
+ ----------------------------------------- -------- ----------------------------
+ PRIVILEGE                                 NOT NULL NUMBER
+ NAME                                      NOT NULL VARCHAR2(40)
+ PROPERTY                                  NOT NULL NUMBER
+
+SQL> SELECT NAME FROM SYSTEM_PRIVILEGE_MAP;
+
+NAME                                                                            
+----------------------------------------                                        
+TEXT DATASTORE ACCESS                                                           
+WRITE ANY ANALYTIC VIEW CACHE                                                   
+READ ANY ANALYTIC VIEW CACHE                                                    
+DROP ANY ANALYTIC VIEW                                                          
+ALTER ANY ANALYTIC VIEW                                                         
+CREATE ANY ANALYTIC VIEW                                                        
+CREATE ANALYTIC VIEW                                                            
+DROP ANY HIERARCHY                                                              
+ALTER ANY HIERARCHY                                                             
+CREATE ANY HIERARCHY                                                            
+CREATE HIERARCHY                                                                
+
+NAME                                                                            
+----------------------------------------                                        
+DROP ANY ATTRIBUTE DIMENSION                                                    
+ALTER ANY ATTRIBUTE DIMENSION                                                   
+CREATE ANY ATTRIBUTE DIMENSION                                                  
+CREATE ATTRIBUTE DIMENSION                                                      
+SYSRAC                                                                          
+READ ANY TABLE                                                                  
+ALTER ANY CUBE BUILD PROCESS                                                    
+SELECT ANY CUBE BUILD PROCESS                                                   
+ALTER ANY MEASURE FOLDER                                                        
+SELECT ANY MEASURE FOLDER                                                       
+USE ANY JOB RESOURCE                                                            
+
+NAME                                                                            
+----------------------------------------                                        
+LOGMINING                                                                       
+CREATE ANY CREDENTIAL                                                           
+CREATE CREDENTIAL                                                               
+ALTER LOCKDOWN PROFILE                                                          
+DROP LOCKDOWN PROFILE                                                           
+CREATE LOCKDOWN PROFILE                                                         
+SET CONTAINER                                                                   
+CREATE PLUGGABLE DATABASE                                                       
+INHERIT ANY REMOTE PRIVILEGES                                                   
+TRANSLATE ANY SQL                                                               
+INHERIT ANY PRIVILEGES                                                          
+
+NAME                                                                            
+----------------------------------------                                        
+EXEMPT REDACTION POLICY                                                         
+FLASHBACK ARCHIVE ADMINISTER                                                    
+PURGE DBA_RECYCLEBIN                                                            
+EM EXPRESS CONNECT                                                              
+KEEP SYSGUID                                                                    
+KEEP DATE TIME                                                                  
+ADMINISTER KEY MANAGEMENT                                                       
+SYSKM                                                                           
+SYSDG                                                                           
+SYSBACKUP                                                                       
+DROP ANY SQL TRANSLATION PROFILE                                                
+
+NAME                                                                            
+----------------------------------------                                        
+USE ANY SQL TRANSLATION PROFILE                                                 
+ALTER ANY SQL TRANSLATION PROFILE                                               
+CREATE ANY SQL TRANSLATION PROFILE                                              
+CREATE SQL TRANSLATION PROFILE                                                  
+ALTER DATABASE LINK                                                             
+ALTER PUBLIC DATABASE LINK                                                      
+ADMINISTER SQL MANAGEMENT OBJECT                                                
+UPDATE ANY CUBE DIMENSION                                                       
+UPDATE ANY CUBE BUILD PROCESS                                                   
+DROP ANY CUBE BUILD PROCESS                                                     
+CREATE ANY CUBE BUILD PROCESS                                                   
+
+NAME                                                                            
+----------------------------------------                                        
+CREATE CUBE BUILD PROCESS                                                       
+INSERT ANY MEASURE FOLDER                                                       
+DROP ANY MEASURE FOLDER                                                         
+DELETE ANY MEASURE FOLDER                                                       
+CREATE ANY MEASURE FOLDER                                                       
+CREATE MEASURE FOLDER                                                           
+UPDATE ANY CUBE                                                                 
+SELECT ANY CUBE                                                                 
+DROP ANY CUBE                                                                   
+CREATE ANY CUBE                                                                 
+ALTER ANY CUBE                                                                  
+
+NAME                                                                            
+----------------------------------------                                        
+CREATE CUBE                                                                     
+SELECT ANY CUBE DIMENSION                                                       
+INSERT ANY CUBE DIMENSION                                                       
+DROP ANY CUBE DIMENSION                                                         
+DELETE ANY CUBE DIMENSION                                                       
+CREATE ANY CUBE DIMENSION                                                       
+ALTER ANY CUBE DIMENSION                                                        
+CREATE CUBE DIMENSION                                                           
+COMMENT ANY MINING MODEL                                                        
+ALTER ANY MINING MODEL                                                          
+SELECT ANY MINING MODEL                                                         
+
+NAME                                                                            
+----------------------------------------                                        
+DROP ANY MINING MODEL                                                           
+CREATE ANY MINING MODEL                                                         
+CREATE MINING MODEL                                                             
+EXECUTE ASSEMBLY                                                                
+EXECUTE ANY ASSEMBLY                                                            
+DROP ANY ASSEMBLY                                                               
+ALTER ANY ASSEMBLY                                                              
+CREATE ANY ASSEMBLY                                                             
+CREATE ASSEMBLY                                                                 
+ALTER ANY EDITION                                                               
+DROP ANY EDITION                                                                
+
+NAME                                                                            
+----------------------------------------                                        
+CREATE ANY EDITION                                                              
+CREATE EXTERNAL JOB                                                             
+CHANGE NOTIFICATION                                                             
+READ ANY FILE GROUP                                                             
+MANAGE ANY FILE GROUP                                                           
+MANAGE FILE GROUP                                                               
+EXEMPT IDENTITY POLICY                                                          
+CREATE ANY SQL PROFILE                                                          
+ADMINISTER ANY SQL TUNING SET                                                   
+ADMINISTER SQL TUNING SET                                                       
+ALTER ANY SQL PROFILE                                                           
+
+NAME                                                                            
+----------------------------------------                                        
+DROP ANY SQL PROFILE                                                            
+SELECT ANY TRANSACTION                                                          
+MANAGE SCHEDULER                                                                
+EXECUTE ANY CLASS                                                               
+EXECUTE ANY PROGRAM                                                             
+CREATE ANY JOB                                                                  
+CREATE JOB                                                                      
+ADVISOR                                                                         
+ANALYZE ANY DICTIONARY                                                          
+EXECUTE ANY RULE                                                                
+DROP ANY RULE                                                                   
+
+NAME                                                                            
+----------------------------------------                                        
+ALTER ANY RULE                                                                  
+CREATE ANY RULE                                                                 
+CREATE RULE                                                                     
+IMPORT FULL DATABASE                                                            
+EXPORT FULL DATABASE                                                            
+EXECUTE ANY RULE SET                                                            
+DROP ANY RULE SET                                                               
+ALTER ANY RULE SET                                                              
+CREATE ANY RULE SET                                                             
+CREATE RULE SET                                                                 
+EXECUTE ANY EVALUATION CONTEXT                                                  
+
+NAME                                                                            
+----------------------------------------                                        
+DROP ANY EVALUATION CONTEXT                                                     
+ALTER ANY EVALUATION CONTEXT                                                    
+CREATE ANY EVALUATION CONTEXT                                                   
+CREATE EVALUATION CONTEXT                                                       
+GRANT ANY OBJECT PRIVILEGE                                                      
+FLASHBACK ANY TABLE                                                             
+DEBUG ANY PROCEDURE                                                             
+DEBUG CONNECT ANY                                                               
+DEBUG CONNECT SESSION                                                           
+SELECT ANY DICTIONARY                                                           
+RESUMABLE                                                                       
+
+NAME                                                                            
+----------------------------------------                                        
+EXEMPT ACCESS POLICY                                                            
+ON COMMIT REFRESH                                                               
+MERGE ANY VIEW                                                                  
+ADMINISTER DATABASE TRIGGER                                                     
+ADMINISTER RESOURCE MANAGER                                                     
+DROP ANY OUTLINE                                                                
+ALTER ANY OUTLINE                                                               
+CREATE ANY OUTLINE                                                              
+DROP ANY CONTEXT                                                                
+CREATE ANY CONTEXT                                                              
+DEQUEUE ANY QUEUE                                                               
+
+NAME                                                                            
+----------------------------------------                                        
+ENQUEUE ANY QUEUE                                                               
+MANAGE ANY QUEUE                                                                
+DROP ANY DIMENSION                                                              
+ALTER ANY DIMENSION                                                             
+CREATE ANY DIMENSION                                                            
+CREATE DIMENSION                                                                
+UNDER ANY TABLE                                                                 
+EXECUTE ANY INDEXTYPE                                                           
+GLOBAL QUERY REWRITE                                                            
+QUERY REWRITE                                                                   
+UNDER ANY VIEW                                                                  
+
+NAME                                                                            
+----------------------------------------                                        
+DROP ANY INDEXTYPE                                                              
+ALTER ANY INDEXTYPE                                                             
+CREATE ANY INDEXTYPE                                                            
+CREATE INDEXTYPE                                                                
+EXECUTE ANY OPERATOR                                                            
+DROP ANY OPERATOR                                                               
+ALTER ANY OPERATOR                                                              
+CREATE ANY OPERATOR                                                             
+CREATE OPERATOR                                                                 
+EXECUTE ANY LIBRARY                                                             
+DROP ANY LIBRARY                                                                
+
+NAME                                                                            
+----------------------------------------                                        
+ALTER ANY LIBRARY                                                               
+CREATE ANY LIBRARY                                                              
+CREATE LIBRARY                                                                  
+UNDER ANY TYPE                                                                  
+EXECUTE ANY TYPE                                                                
+DROP ANY TYPE                                                                   
+ALTER ANY TYPE                                                                  
+CREATE ANY TYPE                                                                 
+CREATE TYPE                                                                     
+DROP ANY DIRECTORY                                                              
+CREATE ANY DIRECTORY                                                            
+
+NAME                                                                            
+----------------------------------------                                        
+DROP ANY MATERIALIZED VIEW                                                      
+ALTER ANY MATERIALIZED VIEW                                                     
+CREATE ANY MATERIALIZED VIEW                                                    
+CREATE MATERIALIZED VIEW                                                        
+GRANT ANY PRIVILEGE                                                             
+ANALYZE ANY                                                                     
+ALTER RESOURCE COST                                                             
+DROP PROFILE                                                                    
+ALTER PROFILE                                                                   
+CREATE PROFILE                                                                  
+DROP ANY TRIGGER                                                                
+
+NAME                                                                            
+----------------------------------------                                        
+ALTER ANY TRIGGER                                                               
+CREATE ANY TRIGGER                                                              
+CREATE TRIGGER                                                                  
+EXECUTE ANY PROCEDURE                                                           
+DROP ANY PROCEDURE                                                              
+ALTER ANY PROCEDURE                                                             
+CREATE ANY PROCEDURE                                                            
+CREATE PROCEDURE                                                                
+FORCE ANY TRANSACTION                                                           
+FORCE TRANSACTION                                                               
+ALTER DATABASE                                                                  
+
+NAME                                                                            
+----------------------------------------                                        
+AUDIT ANY                                                                       
+ALTER ANY ROLE                                                                  
+GRANT ANY ROLE                                                                  
+DROP ANY ROLE                                                                   
+CREATE ROLE                                                                     
+DROP PUBLIC DATABASE LINK                                                       
+CREATE PUBLIC DATABASE LINK                                                     
+CREATE DATABASE LINK                                                            
+SELECT ANY SEQUENCE                                                             
+DROP ANY SEQUENCE                                                               
+ALTER ANY SEQUENCE                                                              
+
+NAME                                                                            
+----------------------------------------                                        
+CREATE ANY SEQUENCE                                                             
+CREATE SEQUENCE                                                                 
+DROP ANY VIEW                                                                   
+CREATE ANY VIEW                                                                 
+CREATE VIEW                                                                     
+DROP PUBLIC SYNONYM                                                             
+CREATE PUBLIC SYNONYM                                                           
+SYSOPER                                                                         
+SYSDBA                                                                          
+DROP ANY SYNONYM                                                                
+CREATE ANY SYNONYM                                                              
+
+NAME                                                                            
+----------------------------------------                                        
+CREATE SYNONYM                                                                  
+DROP ANY INDEX                                                                  
+ALTER ANY INDEX                                                                 
+CREATE ANY INDEX                                                                
+DROP ANY CLUSTER                                                                
+ALTER ANY CLUSTER                                                               
+CREATE ANY CLUSTER                                                              
+CREATE CLUSTER                                                                  
+REDEFINE ANY TABLE                                                              
+DELETE ANY TABLE                                                                
+UPDATE ANY TABLE                                                                
+
+NAME                                                                            
+----------------------------------------                                        
+INSERT ANY TABLE                                                                
+SELECT ANY TABLE                                                                
+COMMENT ANY TABLE                                                               
+LOCK ANY TABLE                                                                  
+DROP ANY TABLE                                                                  
+BACKUP ANY TABLE                                                                
+ALTER ANY TABLE                                                                 
+CREATE ANY TABLE                                                                
+CREATE TABLE                                                                    
+DROP ROLLBACK SEGMENT                                                           
+ALTER ROLLBACK SEGMENT                                                          
+
+NAME                                                                            
+----------------------------------------                                        
+CREATE ROLLBACK SEGMENT                                                         
+DROP USER                                                                       
+ALTER USER                                                                      
+BECOME USER                                                                     
+CREATE USER                                                                     
+UNLIMITED TABLESPACE                                                            
+DROP TABLESPACE                                                                 
+MANAGE TABLESPACE                                                               
+ALTER TABLESPACE                                                                
+CREATE TABLESPACE                                                               
+RESTRICTED SESSION                                                              
+
+NAME                                                                            
+----------------------------------------                                        
+ALTER SESSION                                                                   
+CREATE SESSION                                                                  
+AUDIT SYSTEM                                                                    
+ALTER SYSTEM                                                                    
+
+257 filas seleccionadas.
+
+SQL> DESCRIBE SYSTEM_PRIVILEGE_MAP;
+ Nombre                                    ¿Nulo?   Tipo
+ ----------------------------------------- -------- ----------------------------
+ PRIVILEGE                                 NOT NULL NUMBER
+ NAME                                      NOT NULL VARCHAR2(40)
+ PROPERTY                                  NOT NULL NUMBER
+
+SQL> SELECT * SYSTEM_PRIVILEGE_MAP;
+SELECT * SYSTEM_PRIVILEGE_MAP
+         *
+ERROR en línea 1:
+ORA-00923: palabra clave FROM no encontrada donde se esperaba 
+
+
+SQL> SELECT *FROM  SYSTEM_PRIVILEGE_MAP;
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+        -3 ALTER SYSTEM                                      0                  
+        -4 AUDIT SYSTEM                                      0                  
+        -5 CREATE SESSION                                    0                  
+        -6 ALTER SESSION                                     0                  
+        -7 RESTRICTED SESSION                                0                  
+       -10 CREATE TABLESPACE                                 0                  
+       -11 ALTER TABLESPACE                                  0                  
+       -12 MANAGE TABLESPACE                                 0                  
+       -13 DROP TABLESPACE                                   0                  
+       -15 UNLIMITED TABLESPACE                              0                  
+       -20 CREATE USER                                       0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+       -21 BECOME USER                                       0                  
+       -22 ALTER USER                                        0                  
+       -23 DROP USER                                         0                  
+       -30 CREATE ROLLBACK SEGMENT                           0                  
+       -31 ALTER ROLLBACK SEGMENT                            0                  
+       -32 DROP ROLLBACK SEGMENT                             0                  
+       -40 CREATE TABLE                                      0                  
+       -41 CREATE ANY TABLE                                  0                  
+       -42 ALTER ANY TABLE                                   0                  
+       -43 BACKUP ANY TABLE                                  0                  
+       -44 DROP ANY TABLE                                    0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+       -45 LOCK ANY TABLE                                    0                  
+       -46 COMMENT ANY TABLE                                 0                  
+       -47 SELECT ANY TABLE                                  0                  
+       -48 INSERT ANY TABLE                                  0                  
+       -49 UPDATE ANY TABLE                                  0                  
+       -50 DELETE ANY TABLE                                  0                  
+       -56 REDEFINE ANY TABLE                                0                  
+       -60 CREATE CLUSTER                                    0                  
+       -61 CREATE ANY CLUSTER                                0                  
+       -62 ALTER ANY CLUSTER                                 0                  
+       -63 DROP ANY CLUSTER                                  0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+       -71 CREATE ANY INDEX                                  0                  
+       -72 ALTER ANY INDEX                                   0                  
+       -73 DROP ANY INDEX                                    0                  
+       -80 CREATE SYNONYM                                    0                  
+       -81 CREATE ANY SYNONYM                                0                  
+       -82 DROP ANY SYNONYM                                  0                  
+       -83 SYSDBA                                            0                  
+       -84 SYSOPER                                           0                  
+       -85 CREATE PUBLIC SYNONYM                             0                  
+       -86 DROP PUBLIC SYNONYM                               0                  
+       -90 CREATE VIEW                                       0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+       -91 CREATE ANY VIEW                                   0                  
+       -92 DROP ANY VIEW                                     0                  
+      -105 CREATE SEQUENCE                                   0                  
+      -106 CREATE ANY SEQUENCE                               0                  
+      -107 ALTER ANY SEQUENCE                                0                  
+      -108 DROP ANY SEQUENCE                                 0                  
+      -109 SELECT ANY SEQUENCE                               0                  
+      -115 CREATE DATABASE LINK                              0                  
+      -120 CREATE PUBLIC DATABASE LINK                       0                  
+      -121 DROP PUBLIC DATABASE LINK                         0                  
+      -125 CREATE ROLE                                       0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -126 DROP ANY ROLE                                     0                  
+      -127 GRANT ANY ROLE                                    0                  
+      -128 ALTER ANY ROLE                                    0                  
+      -130 AUDIT ANY                                         0                  
+      -135 ALTER DATABASE                                    0                  
+      -138 FORCE TRANSACTION                                 0                  
+      -139 FORCE ANY TRANSACTION                             0                  
+      -140 CREATE PROCEDURE                                  0                  
+      -141 CREATE ANY PROCEDURE                              0                  
+      -142 ALTER ANY PROCEDURE                               0                  
+      -143 DROP ANY PROCEDURE                                0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -144 EXECUTE ANY PROCEDURE                             0                  
+      -151 CREATE TRIGGER                                    0                  
+      -152 CREATE ANY TRIGGER                                0                  
+      -153 ALTER ANY TRIGGER                                 0                  
+      -154 DROP ANY TRIGGER                                  0                  
+      -160 CREATE PROFILE                                    0                  
+      -161 ALTER PROFILE                                     0                  
+      -162 DROP PROFILE                                      0                  
+      -163 ALTER RESOURCE COST                               0                  
+      -165 ANALYZE ANY                                       0                  
+      -167 GRANT ANY PRIVILEGE                               0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -172 CREATE MATERIALIZED VIEW                          0                  
+      -173 CREATE ANY MATERIALIZED VIEW                      0                  
+      -174 ALTER ANY MATERIALIZED VIEW                       0                  
+      -175 DROP ANY MATERIALIZED VIEW                        0                  
+      -177 CREATE ANY DIRECTORY                              0                  
+      -178 DROP ANY DIRECTORY                                0                  
+      -180 CREATE TYPE                                       0                  
+      -181 CREATE ANY TYPE                                   0                  
+      -182 ALTER ANY TYPE                                    0                  
+      -183 DROP ANY TYPE                                     0                  
+      -184 EXECUTE ANY TYPE                                  0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -186 UNDER ANY TYPE                                    0                  
+      -188 CREATE LIBRARY                                    0                  
+      -189 CREATE ANY LIBRARY                                0                  
+      -190 ALTER ANY LIBRARY                                 0                  
+      -191 DROP ANY LIBRARY                                  0                  
+      -192 EXECUTE ANY LIBRARY                               0                  
+      -200 CREATE OPERATOR                                   0                  
+      -201 CREATE ANY OPERATOR                               0                  
+      -202 ALTER ANY OPERATOR                                0                  
+      -203 DROP ANY OPERATOR                                 0                  
+      -204 EXECUTE ANY OPERATOR                              0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -205 CREATE INDEXTYPE                                  0                  
+      -206 CREATE ANY INDEXTYPE                              0                  
+      -207 ALTER ANY INDEXTYPE                               0                  
+      -208 DROP ANY INDEXTYPE                                0                  
+      -209 UNDER ANY VIEW                                    0                  
+      -210 QUERY REWRITE                                     0                  
+      -211 GLOBAL QUERY REWRITE                              0                  
+      -212 EXECUTE ANY INDEXTYPE                             0                  
+      -213 UNDER ANY TABLE                                   0                  
+      -214 CREATE DIMENSION                                  0                  
+      -215 CREATE ANY DIMENSION                              0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -216 ALTER ANY DIMENSION                               0                  
+      -217 DROP ANY DIMENSION                                0                  
+      -218 MANAGE ANY QUEUE                                  1                  
+      -219 ENQUEUE ANY QUEUE                                 1                  
+      -220 DEQUEUE ANY QUEUE                                 1                  
+      -222 CREATE ANY CONTEXT                                0                  
+      -223 DROP ANY CONTEXT                                  0                  
+      -224 CREATE ANY OUTLINE                                0                  
+      -225 ALTER ANY OUTLINE                                 0                  
+      -226 DROP ANY OUTLINE                                  0                  
+      -227 ADMINISTER RESOURCE MANAGER                       1                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -228 ADMINISTER DATABASE TRIGGER                       0                  
+      -233 MERGE ANY VIEW                                    0                  
+      -234 ON COMMIT REFRESH                                 0                  
+      -235 EXEMPT ACCESS POLICY                              0                  
+      -236 RESUMABLE                                         0                  
+      -237 SELECT ANY DICTIONARY                             0                  
+      -238 DEBUG CONNECT SESSION                             0                  
+      -240 DEBUG CONNECT ANY                                 0                  
+      -241 DEBUG ANY PROCEDURE                               0                  
+      -243 FLASHBACK ANY TABLE                               0                  
+      -244 GRANT ANY OBJECT PRIVILEGE                        0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -245 CREATE EVALUATION CONTEXT                         1                  
+      -246 CREATE ANY EVALUATION CONTEXT                     1                  
+      -247 ALTER ANY EVALUATION CONTEXT                      1                  
+      -248 DROP ANY EVALUATION CONTEXT                       1                  
+      -249 EXECUTE ANY EVALUATION CONTEXT                    1                  
+      -250 CREATE RULE SET                                   1                  
+      -251 CREATE ANY RULE SET                               1                  
+      -252 ALTER ANY RULE SET                                1                  
+      -253 DROP ANY RULE SET                                 1                  
+      -254 EXECUTE ANY RULE SET                              1                  
+      -255 EXPORT FULL DATABASE                              0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -256 IMPORT FULL DATABASE                              0                  
+      -257 CREATE RULE                                       1                  
+      -258 CREATE ANY RULE                                   1                  
+      -259 ALTER ANY RULE                                    1                  
+      -260 DROP ANY RULE                                     1                  
+      -261 EXECUTE ANY RULE                                  1                  
+      -262 ANALYZE ANY DICTIONARY                            0                  
+      -263 ADVISOR                                           0                  
+      -264 CREATE JOB                                        0                  
+      -265 CREATE ANY JOB                                    0                  
+      -266 EXECUTE ANY PROGRAM                               0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -267 EXECUTE ANY CLASS                                 0                  
+      -268 MANAGE SCHEDULER                                  0                  
+      -269 SELECT ANY TRANSACTION                            0                  
+      -270 DROP ANY SQL PROFILE                              0                  
+      -271 ALTER ANY SQL PROFILE                             0                  
+      -272 ADMINISTER SQL TUNING SET                         0                  
+      -273 ADMINISTER ANY SQL TUNING SET                     0                  
+      -274 CREATE ANY SQL PROFILE                            0                  
+      -275 EXEMPT IDENTITY POLICY                            0                  
+      -276 MANAGE FILE GROUP                                 1                  
+      -277 MANAGE ANY FILE GROUP                             1                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -278 READ ANY FILE GROUP                               1                  
+      -279 CHANGE NOTIFICATION                               0                  
+      -280 CREATE EXTERNAL JOB                               0                  
+      -281 CREATE ANY EDITION                                0                  
+      -282 DROP ANY EDITION                                  0                  
+      -283 ALTER ANY EDITION                                 0                  
+      -284 CREATE ASSEMBLY                                   0                  
+      -285 CREATE ANY ASSEMBLY                               0                  
+      -286 ALTER ANY ASSEMBLY                                0                  
+      -287 DROP ANY ASSEMBLY                                 0                  
+      -288 EXECUTE ANY ASSEMBLY                              0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -289 EXECUTE ASSEMBLY                                  0                  
+      -290 CREATE MINING MODEL                               0                  
+      -291 CREATE ANY MINING MODEL                           0                  
+      -292 DROP ANY MINING MODEL                             0                  
+      -293 SELECT ANY MINING MODEL                           0                  
+      -294 ALTER ANY MINING MODEL                            0                  
+      -295 COMMENT ANY MINING MODEL                          0                  
+      -301 CREATE CUBE DIMENSION                             0                  
+      -302 ALTER ANY CUBE DIMENSION                          0                  
+      -303 CREATE ANY CUBE DIMENSION                         0                  
+      -304 DELETE ANY CUBE DIMENSION                         0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -305 DROP ANY CUBE DIMENSION                           0                  
+      -306 INSERT ANY CUBE DIMENSION                         0                  
+      -307 SELECT ANY CUBE DIMENSION                         0                  
+      -308 CREATE CUBE                                       0                  
+      -309 ALTER ANY CUBE                                    0                  
+      -310 CREATE ANY CUBE                                   0                  
+      -311 DROP ANY CUBE                                     0                  
+      -312 SELECT ANY CUBE                                   0                  
+      -313 UPDATE ANY CUBE                                   0                  
+      -314 CREATE MEASURE FOLDER                             0                  
+      -315 CREATE ANY MEASURE FOLDER                         0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -316 DELETE ANY MEASURE FOLDER                         0                  
+      -317 DROP ANY MEASURE FOLDER                           0                  
+      -318 INSERT ANY MEASURE FOLDER                         0                  
+      -319 CREATE CUBE BUILD PROCESS                         0                  
+      -320 CREATE ANY CUBE BUILD PROCESS                     0                  
+      -321 DROP ANY CUBE BUILD PROCESS                       0                  
+      -322 UPDATE ANY CUBE BUILD PROCESS                     0                  
+      -326 UPDATE ANY CUBE DIMENSION                         0                  
+      -327 ADMINISTER SQL MANAGEMENT OBJECT                  0                  
+      -328 ALTER PUBLIC DATABASE LINK                        0                  
+      -329 ALTER DATABASE LINK                               0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -334 CREATE SQL TRANSLATION PROFILE                    0                  
+      -335 CREATE ANY SQL TRANSLATION PROFILE                0                  
+      -336 ALTER ANY SQL TRANSLATION PROFILE                 0                  
+      -337 USE ANY SQL TRANSLATION PROFILE                   0                  
+      -338 DROP ANY SQL TRANSLATION PROFILE                  0                  
+      -340 SYSBACKUP                                         0                  
+      -341 SYSDG                                             0                  
+      -342 SYSKM                                             0                  
+      -343 ADMINISTER KEY MANAGEMENT                         0                  
+      -344 KEEP DATE TIME                                    0                  
+      -345 KEEP SYSGUID                                      0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -346 EM EXPRESS CONNECT                                0                  
+      -347 PURGE DBA_RECYCLEBIN                              0                  
+      -350 FLASHBACK ARCHIVE ADMINISTER                      0                  
+      -351 EXEMPT REDACTION POLICY                           0                  
+      -352 INHERIT ANY PRIVILEGES                            0                  
+      -355 TRANSLATE ANY SQL                                 0                  
+      -365 INHERIT ANY REMOTE PRIVILEGES                     0                  
+      -375 CREATE PLUGGABLE DATABASE                         0                  
+      -377 SET CONTAINER                                     0                  
+      -378 CREATE LOCKDOWN PROFILE                           0                  
+      -379 DROP LOCKDOWN PROFILE                             0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -380 ALTER LOCKDOWN PROFILE                            0                  
+      -387 CREATE CREDENTIAL                                 0                  
+      -388 CREATE ANY CREDENTIAL                             0                  
+      -389 LOGMINING                                         0                  
+      -390 USE ANY JOB RESOURCE                              0                  
+      -393 SELECT ANY MEASURE FOLDER                         0                  
+      -394 ALTER ANY MEASURE FOLDER                          0                  
+      -395 SELECT ANY CUBE BUILD PROCESS                     0                  
+      -396 ALTER ANY CUBE BUILD PROCESS                      0                  
+      -397 READ ANY TABLE                                    0                  
+      -398 SYSRAC                                            0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -399 CREATE ATTRIBUTE DIMENSION                        0                  
+      -400 CREATE ANY ATTRIBUTE DIMENSION                    0                  
+      -401 ALTER ANY ATTRIBUTE DIMENSION                     0                  
+      -402 DROP ANY ATTRIBUTE DIMENSION                      0                  
+      -403 CREATE HIERARCHY                                  0                  
+      -404 CREATE ANY HIERARCHY                              0                  
+      -405 ALTER ANY HIERARCHY                               0                  
+      -406 DROP ANY HIERARCHY                                0                  
+      -407 CREATE ANALYTIC VIEW                              0                  
+      -408 CREATE ANY ANALYTIC VIEW                          0                  
+      -409 ALTER ANY ANALYTIC VIEW                           0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -410 DROP ANY ANALYTIC VIEW                            0                  
+      -411 READ ANY ANALYTIC VIEW CACHE                      0                  
+      -412 WRITE ANY ANALYTIC VIEW CACHE                     0                  
+      -414 TEXT DATASTORE ACCESS                             0                  
+
+257 filas seleccionadas.
+
+SQL> SELECT *FROM  SYSTEM_PRIVILEGE_MAP WHERE NAME LIKE '%CREATE';
+
+ninguna fila seleccionada
+
+SQL> SELECT *FROM  SYSTEM_PRIVILEGE_MAP WHERE NAME LIKE 'CREATE%';
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+        -5 CREATE SESSION                                    0                  
+       -10 CREATE TABLESPACE                                 0                  
+       -20 CREATE USER                                       0                  
+       -30 CREATE ROLLBACK SEGMENT                           0                  
+       -40 CREATE TABLE                                      0                  
+       -41 CREATE ANY TABLE                                  0                  
+       -60 CREATE CLUSTER                                    0                  
+       -61 CREATE ANY CLUSTER                                0                  
+       -71 CREATE ANY INDEX                                  0                  
+       -80 CREATE SYNONYM                                    0                  
+       -81 CREATE ANY SYNONYM                                0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+       -85 CREATE PUBLIC SYNONYM                             0                  
+       -90 CREATE VIEW                                       0                  
+       -91 CREATE ANY VIEW                                   0                  
+      -105 CREATE SEQUENCE                                   0                  
+      -106 CREATE ANY SEQUENCE                               0                  
+      -115 CREATE DATABASE LINK                              0                  
+      -120 CREATE PUBLIC DATABASE LINK                       0                  
+      -125 CREATE ROLE                                       0                  
+      -140 CREATE PROCEDURE                                  0                  
+      -141 CREATE ANY PROCEDURE                              0                  
+      -151 CREATE TRIGGER                                    0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -152 CREATE ANY TRIGGER                                0                  
+      -160 CREATE PROFILE                                    0                  
+      -172 CREATE MATERIALIZED VIEW                          0                  
+      -173 CREATE ANY MATERIALIZED VIEW                      0                  
+      -177 CREATE ANY DIRECTORY                              0                  
+      -180 CREATE TYPE                                       0                  
+      -181 CREATE ANY TYPE                                   0                  
+      -188 CREATE LIBRARY                                    0                  
+      -189 CREATE ANY LIBRARY                                0                  
+      -200 CREATE OPERATOR                                   0                  
+      -201 CREATE ANY OPERATOR                               0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -205 CREATE INDEXTYPE                                  0                  
+      -206 CREATE ANY INDEXTYPE                              0                  
+      -214 CREATE DIMENSION                                  0                  
+      -215 CREATE ANY DIMENSION                              0                  
+      -222 CREATE ANY CONTEXT                                0                  
+      -224 CREATE ANY OUTLINE                                0                  
+      -245 CREATE EVALUATION CONTEXT                         1                  
+      -246 CREATE ANY EVALUATION CONTEXT                     1                  
+      -250 CREATE RULE SET                                   1                  
+      -251 CREATE ANY RULE SET                               1                  
+      -257 CREATE RULE                                       1                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -258 CREATE ANY RULE                                   1                  
+      -264 CREATE JOB                                        0                  
+      -265 CREATE ANY JOB                                    0                  
+      -274 CREATE ANY SQL PROFILE                            0                  
+      -280 CREATE EXTERNAL JOB                               0                  
+      -281 CREATE ANY EDITION                                0                  
+      -284 CREATE ASSEMBLY                                   0                  
+      -285 CREATE ANY ASSEMBLY                               0                  
+      -290 CREATE MINING MODEL                               0                  
+      -291 CREATE ANY MINING MODEL                           0                  
+      -301 CREATE CUBE DIMENSION                             0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -303 CREATE ANY CUBE DIMENSION                         0                  
+      -308 CREATE CUBE                                       0                  
+      -310 CREATE ANY CUBE                                   0                  
+      -314 CREATE MEASURE FOLDER                             0                  
+      -315 CREATE ANY MEASURE FOLDER                         0                  
+      -319 CREATE CUBE BUILD PROCESS                         0                  
+      -320 CREATE ANY CUBE BUILD PROCESS                     0                  
+      -334 CREATE SQL TRANSLATION PROFILE                    0                  
+      -335 CREATE ANY SQL TRANSLATION PROFILE                0                  
+      -375 CREATE PLUGGABLE DATABASE                         0                  
+      -378 CREATE LOCKDOWN PROFILE                           0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -387 CREATE CREDENTIAL                                 0                  
+      -388 CREATE ANY CREDENTIAL                             0                  
+      -399 CREATE ATTRIBUTE DIMENSION                        0                  
+      -400 CREATE ANY ATTRIBUTE DIMENSION                    0                  
+      -403 CREATE HIERARCHY                                  0                  
+      -404 CREATE ANY HIERARCHY                              0                  
+      -407 CREATE ANALYTIC VIEW                              0                  
+      -408 CREATE ANY ANALYTIC VIEW                          0                  
+
+74 filas seleccionadas.
+
+SQL> SELECT *FROM  SYSTEM_PRIVILEGE_MAP WHERE NAME LIKE '%TABLE%';
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+       -10 CREATE TABLESPACE                                 0                  
+       -11 ALTER TABLESPACE                                  0                  
+       -12 MANAGE TABLESPACE                                 0                  
+       -13 DROP TABLESPACE                                   0                  
+       -15 UNLIMITED TABLESPACE                              0                  
+       -40 CREATE TABLE                                      0                  
+       -41 CREATE ANY TABLE                                  0                  
+       -42 ALTER ANY TABLE                                   0                  
+       -43 BACKUP ANY TABLE                                  0                  
+       -44 DROP ANY TABLE                                    0                  
+       -45 LOCK ANY TABLE                                    0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+       -46 COMMENT ANY TABLE                                 0                  
+       -47 SELECT ANY TABLE                                  0                  
+       -48 INSERT ANY TABLE                                  0                  
+       -49 UPDATE ANY TABLE                                  0                  
+       -50 DELETE ANY TABLE                                  0                  
+       -56 REDEFINE ANY TABLE                                0                  
+      -213 UNDER ANY TABLE                                   0                  
+      -243 FLASHBACK ANY TABLE                               0                  
+      -397 READ ANY TABLE                                    0                  
+
+20 filas seleccionadas.
+
+SQL> SELECT *FROM  SYSTEM_PRIVILEGE_MAP WHERE NAME LIKE 'CREATE%';
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+        -5 CREATE SESSION                                    0                  
+       -10 CREATE TABLESPACE                                 0                  
+       -20 CREATE USER                                       0                  
+       -30 CREATE ROLLBACK SEGMENT                           0                  
+       -40 CREATE TABLE                                      0                  
+       -41 CREATE ANY TABLE                                  0                  
+       -60 CREATE CLUSTER                                    0                  
+       -61 CREATE ANY CLUSTER                                0                  
+       -71 CREATE ANY INDEX                                  0                  
+       -80 CREATE SYNONYM                                    0                  
+       -81 CREATE ANY SYNONYM                                0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+       -85 CREATE PUBLIC SYNONYM                             0                  
+       -90 CREATE VIEW                                       0                  
+       -91 CREATE ANY VIEW                                   0                  
+      -105 CREATE SEQUENCE                                   0                  
+      -106 CREATE ANY SEQUENCE                               0                  
+      -115 CREATE DATABASE LINK                              0                  
+      -120 CREATE PUBLIC DATABASE LINK                       0                  
+      -125 CREATE ROLE                                       0                  
+      -140 CREATE PROCEDURE                                  0                  
+      -141 CREATE ANY PROCEDURE                              0                  
+      -151 CREATE TRIGGER                                    0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -152 CREATE ANY TRIGGER                                0                  
+      -160 CREATE PROFILE                                    0                  
+      -172 CREATE MATERIALIZED VIEW                          0                  
+      -173 CREATE ANY MATERIALIZED VIEW                      0                  
+      -177 CREATE ANY DIRECTORY                              0                  
+      -180 CREATE TYPE                                       0                  
+      -181 CREATE ANY TYPE                                   0                  
+      -188 CREATE LIBRARY                                    0                  
+      -189 CREATE ANY LIBRARY                                0                  
+      -200 CREATE OPERATOR                                   0                  
+      -201 CREATE ANY OPERATOR                               0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -205 CREATE INDEXTYPE                                  0                  
+      -206 CREATE ANY INDEXTYPE                              0                  
+      -214 CREATE DIMENSION                                  0                  
+      -215 CREATE ANY DIMENSION                              0                  
+      -222 CREATE ANY CONTEXT                                0                  
+      -224 CREATE ANY OUTLINE                                0                  
+      -245 CREATE EVALUATION CONTEXT                         1                  
+      -246 CREATE ANY EVALUATION CONTEXT                     1                  
+      -250 CREATE RULE SET                                   1                  
+      -251 CREATE ANY RULE SET                               1                  
+      -257 CREATE RULE                                       1                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -258 CREATE ANY RULE                                   1                  
+      -264 CREATE JOB                                        0                  
+      -265 CREATE ANY JOB                                    0                  
+      -274 CREATE ANY SQL PROFILE                            0                  
+      -280 CREATE EXTERNAL JOB                               0                  
+      -281 CREATE ANY EDITION                                0                  
+      -284 CREATE ASSEMBLY                                   0                  
+      -285 CREATE ANY ASSEMBLY                               0                  
+      -290 CREATE MINING MODEL                               0                  
+      -291 CREATE ANY MINING MODEL                           0                  
+      -301 CREATE CUBE DIMENSION                             0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -303 CREATE ANY CUBE DIMENSION                         0                  
+      -308 CREATE CUBE                                       0                  
+      -310 CREATE ANY CUBE                                   0                  
+      -314 CREATE MEASURE FOLDER                             0                  
+      -315 CREATE ANY MEASURE FOLDER                         0                  
+      -319 CREATE CUBE BUILD PROCESS                         0                  
+      -320 CREATE ANY CUBE BUILD PROCESS                     0                  
+      -334 CREATE SQL TRANSLATION PROFILE                    0                  
+      -335 CREATE ANY SQL TRANSLATION PROFILE                0                  
+      -375 CREATE PLUGGABLE DATABASE                         0                  
+      -378 CREATE LOCKDOWN PROFILE                           0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -387 CREATE CREDENTIAL                                 0                  
+      -388 CREATE ANY CREDENTIAL                             0                  
+      -399 CREATE ATTRIBUTE DIMENSION                        0                  
+      -400 CREATE ANY ATTRIBUTE DIMENSION                    0                  
+      -403 CREATE HIERARCHY                                  0                  
+      -404 CREATE ANY HIERARCHY                              0                  
+      -407 CREATE ANALYTIC VIEW                              0                  
+      -408 CREATE ANY ANALYTIC VIEW                          0                  
+
+74 filas seleccionadas.
+
+SQL> SELECT *FROM  SYSTEM_PRIVILEGE_MAP WHERE NAME LIKE 'CREATE%' ORDER BY NAME;
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -407 CREATE ANALYTIC VIEW                              0                  
+      -408 CREATE ANY ANALYTIC VIEW                          0                  
+      -285 CREATE ANY ASSEMBLY                               0                  
+      -400 CREATE ANY ATTRIBUTE DIMENSION                    0                  
+       -61 CREATE ANY CLUSTER                                0                  
+      -222 CREATE ANY CONTEXT                                0                  
+      -388 CREATE ANY CREDENTIAL                             0                  
+      -310 CREATE ANY CUBE                                   0                  
+      -320 CREATE ANY CUBE BUILD PROCESS                     0                  
+      -303 CREATE ANY CUBE DIMENSION                         0                  
+      -215 CREATE ANY DIMENSION                              0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -177 CREATE ANY DIRECTORY                              0                  
+      -281 CREATE ANY EDITION                                0                  
+      -246 CREATE ANY EVALUATION CONTEXT                     1                  
+      -404 CREATE ANY HIERARCHY                              0                  
+       -71 CREATE ANY INDEX                                  0                  
+      -206 CREATE ANY INDEXTYPE                              0                  
+      -265 CREATE ANY JOB                                    0                  
+      -189 CREATE ANY LIBRARY                                0                  
+      -173 CREATE ANY MATERIALIZED VIEW                      0                  
+      -315 CREATE ANY MEASURE FOLDER                         0                  
+      -291 CREATE ANY MINING MODEL                           0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -201 CREATE ANY OPERATOR                               0                  
+      -224 CREATE ANY OUTLINE                                0                  
+      -141 CREATE ANY PROCEDURE                              0                  
+      -258 CREATE ANY RULE                                   1                  
+      -251 CREATE ANY RULE SET                               1                  
+      -106 CREATE ANY SEQUENCE                               0                  
+      -274 CREATE ANY SQL PROFILE                            0                  
+      -335 CREATE ANY SQL TRANSLATION PROFILE                0                  
+       -81 CREATE ANY SYNONYM                                0                  
+       -41 CREATE ANY TABLE                                  0                  
+      -152 CREATE ANY TRIGGER                                0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -181 CREATE ANY TYPE                                   0                  
+       -91 CREATE ANY VIEW                                   0                  
+      -284 CREATE ASSEMBLY                                   0                  
+      -399 CREATE ATTRIBUTE DIMENSION                        0                  
+       -60 CREATE CLUSTER                                    0                  
+      -387 CREATE CREDENTIAL                                 0                  
+      -308 CREATE CUBE                                       0                  
+      -319 CREATE CUBE BUILD PROCESS                         0                  
+      -301 CREATE CUBE DIMENSION                             0                  
+      -115 CREATE DATABASE LINK                              0                  
+      -214 CREATE DIMENSION                                  0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -245 CREATE EVALUATION CONTEXT                         1                  
+      -280 CREATE EXTERNAL JOB                               0                  
+      -403 CREATE HIERARCHY                                  0                  
+      -205 CREATE INDEXTYPE                                  0                  
+      -264 CREATE JOB                                        0                  
+      -188 CREATE LIBRARY                                    0                  
+      -378 CREATE LOCKDOWN PROFILE                           0                  
+      -172 CREATE MATERIALIZED VIEW                          0                  
+      -314 CREATE MEASURE FOLDER                             0                  
+      -290 CREATE MINING MODEL                               0                  
+      -200 CREATE OPERATOR                                   0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -375 CREATE PLUGGABLE DATABASE                         0                  
+      -140 CREATE PROCEDURE                                  0                  
+      -160 CREATE PROFILE                                    0                  
+      -120 CREATE PUBLIC DATABASE LINK                       0                  
+       -85 CREATE PUBLIC SYNONYM                             0                  
+      -125 CREATE ROLE                                       0                  
+       -30 CREATE ROLLBACK SEGMENT                           0                  
+      -257 CREATE RULE                                       1                  
+      -250 CREATE RULE SET                                   1                  
+      -105 CREATE SEQUENCE                                   0                  
+        -5 CREATE SESSION                                    0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -334 CREATE SQL TRANSLATION PROFILE                    0                  
+       -80 CREATE SYNONYM                                    0                  
+       -40 CREATE TABLE                                      0                  
+       -10 CREATE TABLESPACE                                 0                  
+      -151 CREATE TRIGGER                                    0                  
+      -180 CREATE TYPE                                       0                  
+       -20 CREATE USER                                       0                  
+       -90 CREATE VIEW                                       0                  
+
+74 filas seleccionadas.
+
+SQL> SELECT *FROM  SYSTEM_PRIVILEGE_MAP WHERE NAME LIKE 'CREATE%';
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+        -5 CREATE SESSION                                    0                  
+       -10 CREATE TABLESPACE                                 0                  
+       -20 CREATE USER                                       0                  
+       -30 CREATE ROLLBACK SEGMENT                           0                  
+       -40 CREATE TABLE                                      0                  
+       -41 CREATE ANY TABLE                                  0                  
+       -60 CREATE CLUSTER                                    0                  
+       -61 CREATE ANY CLUSTER                                0                  
+       -71 CREATE ANY INDEX                                  0                  
+       -80 CREATE SYNONYM                                    0                  
+       -81 CREATE ANY SYNONYM                                0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+       -85 CREATE PUBLIC SYNONYM                             0                  
+       -90 CREATE VIEW                                       0                  
+       -91 CREATE ANY VIEW                                   0                  
+      -105 CREATE SEQUENCE                                   0                  
+      -106 CREATE ANY SEQUENCE                               0                  
+      -115 CREATE DATABASE LINK                              0                  
+      -120 CREATE PUBLIC DATABASE LINK                       0                  
+      -125 CREATE ROLE                                       0                  
+      -140 CREATE PROCEDURE                                  0                  
+      -141 CREATE ANY PROCEDURE                              0                  
+      -151 CREATE TRIGGER                                    0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -152 CREATE ANY TRIGGER                                0                  
+      -160 CREATE PROFILE                                    0                  
+      -172 CREATE MATERIALIZED VIEW                          0                  
+      -173 CREATE ANY MATERIALIZED VIEW                      0                  
+      -177 CREATE ANY DIRECTORY                              0                  
+      -180 CREATE TYPE                                       0                  
+      -181 CREATE ANY TYPE                                   0                  
+      -188 CREATE LIBRARY                                    0                  
+      -189 CREATE ANY LIBRARY                                0                  
+      -200 CREATE OPERATOR                                   0                  
+      -201 CREATE ANY OPERATOR                               0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -205 CREATE INDEXTYPE                                  0                  
+      -206 CREATE ANY INDEXTYPE                              0                  
+      -214 CREATE DIMENSION                                  0                  
+      -215 CREATE ANY DIMENSION                              0                  
+      -222 CREATE ANY CONTEXT                                0                  
+      -224 CREATE ANY OUTLINE                                0                  
+      -245 CREATE EVALUATION CONTEXT                         1                  
+      -246 CREATE ANY EVALUATION CONTEXT                     1                  
+      -250 CREATE RULE SET                                   1                  
+      -251 CREATE ANY RULE SET                               1                  
+      -257 CREATE RULE                                       1                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -258 CREATE ANY RULE                                   1                  
+      -264 CREATE JOB                                        0                  
+      -265 CREATE ANY JOB                                    0                  
+      -274 CREATE ANY SQL PROFILE                            0                  
+      -280 CREATE EXTERNAL JOB                               0                  
+      -281 CREATE ANY EDITION                                0                  
+      -284 CREATE ASSEMBLY                                   0                  
+      -285 CREATE ANY ASSEMBLY                               0                  
+      -290 CREATE MINING MODEL                               0                  
+      -291 CREATE ANY MINING MODEL                           0                  
+      -301 CREATE CUBE DIMENSION                             0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -303 CREATE ANY CUBE DIMENSION                         0                  
+      -308 CREATE CUBE                                       0                  
+      -310 CREATE ANY CUBE                                   0                  
+      -314 CREATE MEASURE FOLDER                             0                  
+      -315 CREATE ANY MEASURE FOLDER                         0                  
+      -319 CREATE CUBE BUILD PROCESS                         0                  
+      -320 CREATE ANY CUBE BUILD PROCESS                     0                  
+      -334 CREATE SQL TRANSLATION PROFILE                    0                  
+      -335 CREATE ANY SQL TRANSLATION PROFILE                0                  
+      -375 CREATE PLUGGABLE DATABASE                         0                  
+      -378 CREATE LOCKDOWN PROFILE                           0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -387 CREATE CREDENTIAL                                 0                  
+      -388 CREATE ANY CREDENTIAL                             0                  
+      -399 CREATE ATTRIBUTE DIMENSION                        0                  
+      -400 CREATE ANY ATTRIBUTE DIMENSION                    0                  
+      -403 CREATE HIERARCHY                                  0                  
+      -404 CREATE ANY HIERARCHY                              0                  
+      -407 CREATE ANALYTIC VIEW                              0                  
+      -408 CREATE ANY ANALYTIC VIEW                          0                  
+
+74 filas seleccionadas.
+
+SQL> SELECT *FROM  SYSTEM_PRIVILEGE_MAP WHERE NAME LIKE 'CREATE%' ORDER BY NAME;
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -407 CREATE ANALYTIC VIEW                              0                  
+      -408 CREATE ANY ANALYTIC VIEW                          0                  
+      -285 CREATE ANY ASSEMBLY                               0                  
+      -400 CREATE ANY ATTRIBUTE DIMENSION                    0                  
+       -61 CREATE ANY CLUSTER                                0                  
+      -222 CREATE ANY CONTEXT                                0                  
+      -388 CREATE ANY CREDENTIAL                             0                  
+      -310 CREATE ANY CUBE                                   0                  
+      -320 CREATE ANY CUBE BUILD PROCESS                     0                  
+      -303 CREATE ANY CUBE DIMENSION                         0                  
+      -215 CREATE ANY DIMENSION                              0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -177 CREATE ANY DIRECTORY                              0                  
+      -281 CREATE ANY EDITION                                0                  
+      -246 CREATE ANY EVALUATION CONTEXT                     1                  
+      -404 CREATE ANY HIERARCHY                              0                  
+       -71 CREATE ANY INDEX                                  0                  
+      -206 CREATE ANY INDEXTYPE                              0                  
+      -265 CREATE ANY JOB                                    0                  
+      -189 CREATE ANY LIBRARY                                0                  
+      -173 CREATE ANY MATERIALIZED VIEW                      0                  
+      -315 CREATE ANY MEASURE FOLDER                         0                  
+      -291 CREATE ANY MINING MODEL                           0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -201 CREATE ANY OPERATOR                               0                  
+      -224 CREATE ANY OUTLINE                                0                  
+      -141 CREATE ANY PROCEDURE                              0                  
+      -258 CREATE ANY RULE                                   1                  
+      -251 CREATE ANY RULE SET                               1                  
+      -106 CREATE ANY SEQUENCE                               0                  
+      -274 CREATE ANY SQL PROFILE                            0                  
+      -335 CREATE ANY SQL TRANSLATION PROFILE                0                  
+       -81 CREATE ANY SYNONYM                                0                  
+       -41 CREATE ANY TABLE                                  0                  
+      -152 CREATE ANY TRIGGER                                0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -181 CREATE ANY TYPE                                   0                  
+       -91 CREATE ANY VIEW                                   0                  
+      -284 CREATE ASSEMBLY                                   0                  
+      -399 CREATE ATTRIBUTE DIMENSION                        0                  
+       -60 CREATE CLUSTER                                    0                  
+      -387 CREATE CREDENTIAL                                 0                  
+      -308 CREATE CUBE                                       0                  
+      -319 CREATE CUBE BUILD PROCESS                         0                  
+      -301 CREATE CUBE DIMENSION                             0                  
+      -115 CREATE DATABASE LINK                              0                  
+      -214 CREATE DIMENSION                                  0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -245 CREATE EVALUATION CONTEXT                         1                  
+      -280 CREATE EXTERNAL JOB                               0                  
+      -403 CREATE HIERARCHY                                  0                  
+      -205 CREATE INDEXTYPE                                  0                  
+      -264 CREATE JOB                                        0                  
+      -188 CREATE LIBRARY                                    0                  
+      -378 CREATE LOCKDOWN PROFILE                           0                  
+      -172 CREATE MATERIALIZED VIEW                          0                  
+      -314 CREATE MEASURE FOLDER                             0                  
+      -290 CREATE MINING MODEL                               0                  
+      -200 CREATE OPERATOR                                   0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -375 CREATE PLUGGABLE DATABASE                         0                  
+      -140 CREATE PROCEDURE                                  0                  
+      -160 CREATE PROFILE                                    0                  
+      -120 CREATE PUBLIC DATABASE LINK                       0                  
+       -85 CREATE PUBLIC SYNONYM                             0                  
+      -125 CREATE ROLE                                       0                  
+       -30 CREATE ROLLBACK SEGMENT                           0                  
+      -257 CREATE RULE                                       1                  
+      -250 CREATE RULE SET                                   1                  
+      -105 CREATE SEQUENCE                                   0                  
+        -5 CREATE SESSION                                    0                  
+
+ PRIVILEGE NAME                                       PROPERTY                  
+---------- ---------------------------------------- ----------                  
+      -334 CREATE SQL TRANSLATION PROFILE                    0                  
+       -80 CREATE SYNONYM                                    0                  
+       -40 CREATE TABLE                                      0                  
+       -10 CREATE TABLESPACE                                 0                  
+      -151 CREATE TRIGGER                                    0                  
+      -180 CREATE TYPE                                       0                  
+       -20 CREATE USER                                       0                  
+       -90 CREATE VIEW                                       0                  
+
+74 filas seleccionadas.
+
+SQL> CONN ANDRES/1903;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+Advertencia: ¡Ya no está conectado a ORACLE!
+SQL> CONN ANDRES/1903@localhost:1521/xepdeb1;
+ERROR:
+ORA-12514: TNS:el listener no conoce actualmente el servicio solicitado en el 
+descriptor de conexión 
+
+
+SQL> conn system/sistem;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+SQL> conn system/system;
+Conectado.
+SQL> alter session set container=xepdb1;
+
+Sesión modificada.
+
+SQL> CREAMOS EL PRIVLEGIO AL USUARIO EN ESTECASO EL DE CREAR SECCION
+SP2-0734: inicio "CREAMOS EL..." de comando desconocido - resto de la línea ignorado.
+SQL> GRANT CREATE SESSION TO ANDRES;
+
+Concesión terminada correctamente.
+
+SQL> CONN ANDRES/1903;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+Advertencia: ¡Ya no está conectado a ORACLE!
+SQL> CONNECT ANDRES/1903;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+SQL> SELECT USER FRON DUAL;
+SP2-0640: No conectado
+SQL> CONN ANDRES/1903;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+SQL> CONN SYSTEM/SYSTEM;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+SQL> conn system/system;
+Conectado.
+SQL> GRANT CREATE SESSION TO ANDRES;
+GRANT CREATE SESSION TO ANDRES
+                        *
+ERROR en línea 1:
+ORA-01917: el usuario o rol 'ANDRES' no existe 
+
+
+SQL> alter session set container=xepdb1;
+
+Sesión modificada.
+
+SQL> GRANT CREATE SESSION TO ANDRES;
+
+Concesión terminada correctamente.
+
+SQL> CONNECT ANDRES/1903;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+Advertencia: ¡Ya no está conectado a ORACLE!
+SQL> conn system/system;
+Conectado.
+SQL> alter session set container=xepdb1;
+
+Sesión modificada.
+
+SQL> DESCRIBE DBA_USERS;
+ Nombre                                    ¿Nulo?   Tipo
+ ----------------------------------------- -------- ----------------------------
+ USERNAME                                  NOT NULL VARCHAR2(128)
+ USER_ID                                   NOT NULL NUMBER
+ PASSWORD                                           VARCHAR2(4000)
+ ACCOUNT_STATUS                            NOT NULL VARCHAR2(32)
+ LOCK_DATE                                          DATE
+ EXPIRY_DATE                                        DATE
+ DEFAULT_TABLESPACE                        NOT NULL VARCHAR2(30)
+ TEMPORARY_TABLESPACE                      NOT NULL VARCHAR2(30)
+ LOCAL_TEMP_TABLESPACE                              VARCHAR2(30)
+ CREATED                                   NOT NULL DATE
+ PROFILE                                   NOT NULL VARCHAR2(128)
+ INITIAL_RSRC_CONSUMER_GROUP                        VARCHAR2(128)
+ EXTERNAL_NAME                                      VARCHAR2(4000)
+ PASSWORD_VERSIONS                                  VARCHAR2(17)
+ EDITIONS_ENABLED                                   VARCHAR2(1)
+ AUTHENTICATION_TYPE                                VARCHAR2(8)
+ PROXY_ONLY_CONNECT                                 VARCHAR2(1)
+ COMMON                                             VARCHAR2(3)
+ LAST_LOGIN                                         TIMESTAMP(9) WITH TIME ZONE
+ ORACLE_MAINTAINED                                  VARCHAR2(1)
+ INHERITED                                          VARCHAR2(3)
+ DEFAULT_COLLATION                                  VARCHAR2(100)
+ IMPLICIT                                           VARCHAR2(3)
+ ALL_SHARD                                          VARCHAR2(3)
+
+SQL> SELECT USERNAME,PASSWORD FROM DBA_USERS;
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+SYS                                                                             
+                                                                                
+                                                                                
+SYSTEM                                                                          
+                                                                                
+                                                                                
+XS$NULL                                                                         
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+LBACSYS                                                                         
+                                                                                
+                                                                                
+OUTLN                                                                           
+                                                                                
+                                                                                
+DBSNMP                                                                          
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+APPQOSSYS                                                                       
+                                                                                
+                                                                                
+DBSFWUSER                                                                       
+                                                                                
+                                                                                
+GGSYS                                                                           
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+ANONYMOUS                                                                       
+                                                                                
+                                                                                
+HR                                                                              
+                                                                                
+                                                                                
+CTXSYS                                                                          
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+DVSYS                                                                           
+                                                                                
+                                                                                
+SI_INFORMTN_SCHEMA                                                              
+                                                                                
+                                                                                
+DVF                                                                             
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+GSMADMIN_INTERNAL                                                               
+                                                                                
+                                                                                
+ORDPLUGINS                                                                      
+                                                                                
+                                                                                
+MDSYS                                                                           
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+OLAPSYS                                                                         
+                                                                                
+                                                                                
+ORDDATA                                                                         
+                                                                                
+                                                                                
+XDB                                                                             
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+WMSYS                                                                           
+                                                                                
+                                                                                
+ORDSYS                                                                          
+                                                                                
+                                                                                
+GSMCATUSER                                                                      
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+MDDATA                                                                          
+                                                                                
+                                                                                
+SYSBACKUP                                                                       
+                                                                                
+                                                                                
+REMOTE_SCHEDULER_AGENT                                                          
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+PDBADMIN                                                                        
+                                                                                
+                                                                                
+GSMUSER                                                                         
+                                                                                
+                                                                                
+SYSRAC                                                                          
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+OJVMSYS                                                                         
+                                                                                
+                                                                                
+AUDSYS                                                                          
+                                                                                
+                                                                                
+DIP                                                                             
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+SYSKM                                                                           
+                                                                                
+                                                                                
+ORACLE_OCM                                                                      
+                                                                                
+                                                                                
+SYS$UMF                                                                         
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+SYSDG                                                                           
+                                                                                
+                                                                                
+ANDRES                                                                          
+                                                                                
+                                                                                
+
+38 filas seleccionadas.
+
+SQL> CREATE USER ANDRES2 IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY  TABLESPACE TEMP PROFILE DEFAULT QUOTA UNLIMITED ON DATOSS;
+
+Usuario creado.
+
+SQL> SELECT USERNAME,PASSWORD FROM DBA_USERS;
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+SYS                                                                             
+                                                                                
+                                                                                
+SYSTEM                                                                          
+                                                                                
+                                                                                
+XS$NULL                                                                         
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+LBACSYS                                                                         
+                                                                                
+                                                                                
+OUTLN                                                                           
+                                                                                
+                                                                                
+DBSNMP                                                                          
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+APPQOSSYS                                                                       
+                                                                                
+                                                                                
+DBSFWUSER                                                                       
+                                                                                
+                                                                                
+GGSYS                                                                           
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+ANONYMOUS                                                                       
+                                                                                
+                                                                                
+HR                                                                              
+                                                                                
+                                                                                
+CTXSYS                                                                          
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+DVSYS                                                                           
+                                                                                
+                                                                                
+SI_INFORMTN_SCHEMA                                                              
+                                                                                
+                                                                                
+DVF                                                                             
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+GSMADMIN_INTERNAL                                                               
+                                                                                
+                                                                                
+ORDPLUGINS                                                                      
+                                                                                
+                                                                                
+MDSYS                                                                           
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+OLAPSYS                                                                         
+                                                                                
+                                                                                
+ORDDATA                                                                         
+                                                                                
+                                                                                
+XDB                                                                             
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+WMSYS                                                                           
+                                                                                
+                                                                                
+ORDSYS                                                                          
+                                                                                
+                                                                                
+GSMCATUSER                                                                      
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+MDDATA                                                                          
+                                                                                
+                                                                                
+SYSBACKUP                                                                       
+                                                                                
+                                                                                
+REMOTE_SCHEDULER_AGENT                                                          
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+PDBADMIN                                                                        
+                                                                                
+                                                                                
+GSMUSER                                                                         
+                                                                                
+                                                                                
+SYSRAC                                                                          
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+OJVMSYS                                                                         
+                                                                                
+                                                                                
+AUDSYS                                                                          
+                                                                                
+                                                                                
+DIP                                                                             
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+SYSKM                                                                           
+                                                                                
+                                                                                
+ORACLE_OCM                                                                      
+                                                                                
+                                                                                
+SYS$UMF                                                                         
+                                                                                
+                                                                                
+
+USERNAME                                                                        
+--------------------------------------------------------------------------------
+PASSWORD                                                                        
+--------------------------------------------------------------------------------
+SYSDG                                                                           
+                                                                                
+                                                                                
+ANDRES                                                                          
+                                                                                
+                                                                                
+ANDRES2                                                                         
+                                                                                
+                                                                                
+
+39 filas seleccionadas.
+
+SQL> GRANT CREATE SESSION TO ANDRES2;
+
+Concesión terminada correctamente.
+
+SQL> CONN ANDRES/;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+Advertencia: ¡Ya no está conectado a ORACLE!
+SQL> CONN ANDRES2
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+SQL> CONN ANDRES/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> CRESTA TEBLE ALUMNO (CEDULA CARCHAR2(12),NOMBRE VARCHAR2(20)NOT NULL,APELLIDO VARCHAR2(20)NOT NULL,PRIMARY KEY(CED));
+SP2-0734: inicio "CRESTA TEB..." de comando desconocido - resto de la línea ignorado.
+SQL> CRESTA TABLE ALUMNO (CEDULA CARCHAR2(12),NOMBRE VARCHAR2(20)NOT NULL,APELLIDO VARCHAR2(20)NOT NULL,PRIMARY KEY(CED));
+SP2-0734: inicio "CRESTA TAB..." de comando desconocido - resto de la línea ignorado.
+SQL> GRANT CREATE TABLE TO ANDRES;
+GRANT CREATE TABLE TO ANDRES
+*
+ERROR en línea 1:
+ORA-01031: privilegios insuficientes 
+
+
+SQL> CONN SYSTEM/system;
+Conectado.
+SQL> GRANT CREATE TABLE TO ANDRES;
+GRANT CREATE TABLE TO ANDRES
+                      *
+ERROR en línea 1:
+ORA-01917: el usuario o rol 'ANDRES' no existe 
+
+
+SQL> alter session set container=xepdb1;
+
+Sesión modificada.
+
+SQL> GRANT CREATE TABLE TO ANDRES;
+
+Concesión terminada correctamente.
+
+SQL> CONN ANDRES/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> CRESTA TABLE ALUMNO (CEDULA CARCHAR2(12),NOMBRE VARCHAR2(20)NOT NULL,APELLIDO VARCHAR2(20)NOT NULL,PRIMARY KEY(CED));
+SP2-0734: inicio "CRESTA TAB..." de comando desconocido - resto de la línea ignorado.
+SQL> CREaTA TABLE ALUMNO (CEDULA CARCHAR2(12),NOMBRE VARCHAR2(20)NOT NULL,APELLIDO VARCHAR2(20)NOT NULL,PRIMARY KEY(CED));
+SP2-0734: inicio "CREaTA TAB..." de comando desconocido - resto de la línea ignorado.
+SQL> CREATA TABLE ALUMNO (CEDULA CARCHAR2(12),NOMBRE VARCHAR2(20)NOT NULL,APELLIDO VARCHAR2(20)NOT NULL,PRIMARY KEY(CED));
+SP2-0734: inicio "CREATA TAB..." de comando desconocido - resto de la línea ignorado.
+SQL> CREATA TABLE ALUMNO(CEDULA CARCHAR2(12),NOMBRE VARCHAR2(20)NOT NULL,APELLIDO VARCHAR2(20)NOT NULL,PRIMARY KEY(CED));
+SP2-0734: inicio "CREATA TAB..." de comando desconocido - resto de la línea ignorado.
+SP2-0044: Si desea ver una lista de comandos conocidos escriba HELP
+ y para salir EXIT.
+SQL> HELP
+
+ HELP
+ ----
+
+ Accesses this command line help system. Enter HELP INDEX or ? INDEX
+ for a list of topics.
+
+ You can view SQL*Plus resources at
+     http://www.oracle.com/technology/documentation/
+
+ ******************************************************************************
+ **  Top 12.2 features:                                                      **
+ **    - Fast retrieval of data as CSV for use in applications like          **
+ **      SQL*Loader. Use SQLPLUS -M "CSV ON" or SET MARKUP CSV ON            **
+ **    - Improved defaults and optimizations for reports. Use SQLPLUS -F     **
+ **    - Command recall. Use SET HISTORY ON and HISTORY to list previous     **
+ **      commands.                                                           **
+ ******************************************************************************
+
+ HELP|? [topic]
+
+
+SQL> create table alumno(cedula varchar2(12) primary key,nombre varchar2(20) not null,apellido varchar2(20) not null);
+
+Tabla creada.
+
+SQL> insert into alumno (cedula,nombre,apellido) values('1065829301','andres','osorio');
+
+1 fila creada.
+
+SQL> insert into alumno (cedula,nombre,apellido) values('1065829302','carlos','peralta');
+
+1 fila creada.
+
+SQL> insert into alumno (cedula,nombre,apellido) values('1065815599','andrea','carmona');
+
+1 fila creada.
+
+SQL> commit;
+
+Confirmación terminada.
+
+SQL> select * from alumno;
+
+CEDULA       NOMBRE               APELLIDO                                      
+------------ -------------------- --------------------                          
+1065829301   andres               osorio                                        
+1065829302   carlos               peralta                                       
+1065815599   andrea               carmona                                       
+
+SQL> delete fron alumno;
+delete fron alumno
+       *
+ERROR en línea 1:
+ORA-00942: la tabla o vista no existe 
+
+
+SQL> delete from alumno;
+
+3 filas suprimidas.
+
+SQL> select * from alumno;
+
+ninguna fila seleccionada
+
+SQL> commit;
+
+Confirmación terminada.
+
+SQL> select * from alumno;
+
+ninguna fila seleccionada
+
+SQL> select table_name fron user_tables;
+select table_name fron user_tables
+                       *
+ERROR en línea 1:
+ORA-00923: palabra clave FROM no encontrada donde se esperaba 
+
+
+SQL> select table_name from user_tables;
+
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+ALUMNO                                                                          
+
+SQL> conn system/sisten;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+Advertencia: ¡Ya no está conectado a ORACLE!
+SQL> conn system/systen;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+SQL> conn system/system;
+Conectado.
+SQL> alter session set container=xepdb1;
+
+Sesión modificada.
+
+SQL> CREATE USER USUARIO2 IDENTIFIED BY 1903 DEFAULT TABLESPACE DATOSS TEMPORARY  TABLESPACE TEMP PROFILE DEFAULT QUOTA UNLIMITED ON DATOSS;
+
+Usuario creado.
+
+SQL> GRANT CREATE SESSION TO USUARIO2;
+
+Concesión terminada correctamente.
+
+SQL> GRANT CREATE TABLE TO USUARIO2;
+
+Concesión terminada correctamente.
+
+SQL> CONN USUARIO2/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> select *from alumno;
+select *from alumno
+             *
+ERROR en línea 1:
+ORA-00942: la tabla o vista no existe 
+
+
+SQL> select table_name from user_tables;
+
+ninguna fila seleccionada
+
+SQL> CONN andres/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> create public cynonym estudiante for esquema.objeto;
+create public cynonym estudiante for esquema.objeto
+              *
+ERROR en línea 1:
+ORA-00901: comando CREATE no válido 
+
+
+SQL> create public synonym estudiante for esquema.objeto;
+create public synonym estudiante for esquema.objeto
+*
+ERROR en línea 1:
+ORA-01031: privilegios insuficientes 
+
+
+SQL> conn system/system;
+Conectado.
+SQL> alter session set container=xepdb1;
+
+Sesión modificada.
+
+SQL> GRANT CREATE SYNONYM TO ANDRES;
+
+Concesión terminada correctamente.
+
+SQL> conn andres/1903@localhost:1521/xepdb2;
+ERROR:
+ORA-12514: TNS:el listener no conoce actualmente el servicio solicitado en el 
+descriptor de conexión 
+
+
+Advertencia: ¡Ya no está conectado a ORACLE!
+SQL> conn andres/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> create public synonym estudiante for andres.alumno;
+create public synonym estudiante for andres.alumno
+*
+ERROR en línea 1:
+ORA-01031: privilegios insuficientes 
+
+
+SQL> conn system/system;
+Conectado.
+SQL> alter session set container=xepdb1;
+
+Sesión modificada.
+
+SQL> GRANT CREATE SYNONYM TO ANDRES;
+
+Concesión terminada correctamente.
+
+SQL> CONN andres/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> create public synonym estudiante for andres.alumno;
+create public synonym estudiante for andres.alumno
+*
+ERROR en línea 1:
+ORA-01031: privilegios insuficientes 
+
+
+SQL> conn system/system;
+Conectado.
+SQL> alter session set container=xepdb1;
+
+Sesión modificada.
+
+SQL> GRANT CREATE PUBLIC SYNONYM TO ANDRES;
+
+Concesión terminada correctamente.
+
+SQL> CONN andres/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> create public synonym estudiante for andres.alumno;
+
+Sinónimo creado.
+
+SQL> CONN USUARIO/1903@localhost:1521/xepdb1;
+ERROR:
+ORA-01017: nombre de usuario/contraseña no válidos; conexión denegada 
+
+
+Advertencia: ¡Ya no está conectado a ORACLE!
+SQL> CONN USUARIO2/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> SELECT * FROM ESTUDIANTE;
+SELECT * FROM ESTUDIANTE
+              *
+ERROR en línea 1:
+ORA-00942: la tabla o vista no existe 
+
+
+SQL> select * from estudiante;
+select * from estudiante
+              *
+ERROR en línea 1:
+ORA-00942: la tabla o vista no existe 
+
+
+SQL> select * from alumno;
+select * from alumno
+              *
+ERROR en línea 1:
+ORA-00942: la tabla o vista no existe 
+
+
+SQL> select * frm estudiante;
+select * frm estudiante
+         *
+ERROR en línea 1:
+ORA-00923: palabra clave FROM no encontrada donde se esperaba 
+
+
+SQL> conn system/system;
+Conectado.
+SQL> drop ublic synonym estudiante;
+drop ublic synonym estudiante
+     *
+ERROR en línea 1:
+ORA-00950: opción DROP no válida 
+
+
+SQL> drop public synonym estudiante;
+drop public synonym estudiante
+                    *
+ERROR en línea 1:
+ORA-01432: el sinónimo público que desea borrar no existe 
+
+
+SQL> drop public synonym alumno;
+drop public synonym alumno
+                    *
+ERROR en línea 1:
+ORA-01432: el sinónimo público que desea borrar no existe 
+
+
+SQL> CONN andres/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> create public synonym estudiante for USUARIO2.alumno;
+create public synonym estudiante for USUARIO2.alumno
+                      *
+ERROR en línea 1:
+ORA-00955: este nombre ya lo está utilizando otro objeto existente 
+
+
+SQL> create public synonym estudiante2 for USUARIO2.alumno;
+
+Sinónimo creado.
+
+SQL> CONN USUARIO2/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> SELECT * FROM  estudiante2;
+SELECT * FROM  estudiante2
+               *
+ERROR en línea 1:
+ORA-00980: la traducción del sinónimo ya no es válida 
+
+
+SQL> SELECT * FROM  alumno;
+SELECT * FROM  alumno
+               *
+ERROR en línea 1:
+ORA-00942: la tabla o vista no existe 
+
+
+SQL> CONN andres/1903@localhost:1521/xepdb1;
+Conectado.
+SQL> spool off;

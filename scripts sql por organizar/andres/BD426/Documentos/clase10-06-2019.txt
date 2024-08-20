@@ -1,0 +1,14 @@
+data file
+: es donde se almacena fisicamente los datos 
+v$datafile es donde encntramos lso datos del data files
+table space:
+son estructuras donde se almacenan los ojetos d elas baces d datos
+son estucturas logicas donde se alacenan los objetos del esquema con l aparticularidad de poder repetirce en varios ficheros(dataFiles) 
+l abace de datos tiene varios tablespace y ek tablespace tieve varios datafiles
+HABLR DE OBJETOS SEGMENTS , EXTENTZ & BLOKES
+el objeto mas grande de la bace de datos es el tablespace el mas pequeno son los bloques 
+tables space, segmentos, extenciones y bloques
+el bloque es un parametroq ue es inmodificable sobre la configuracio de oracle solamente se configura al moemnro de la instalacion
+para ls tablespace hay una tala en el diccionario de datos v$tblespace
+un data file sol pertenece a un table space y un table space solo pertenece a una bace d edatos
+

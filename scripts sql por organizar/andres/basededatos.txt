@@ -1,0 +1,69 @@
+--1
+set SERVEROUTPUT on;
+declare 
+cursor c1 is 
+select last_name,salary from employees where employee_id = 100;
+c1rec c1%ROWTYPE;
+nombre varchar2(20);
+salario number(8,2);
+begin
+OPEN c1;
+LOOP
+ FETCH C1 INTO nombre, salario;
+      EXIT WHEN C1%NOTFOUND;
+DBMS_OUTPUT.PUT_LINE(nombre || '  $' || salario);
+end loop;
+close c1;
+end;
+
+2--
+set SERVEROUTPUT on;
+declare 
+cursor c1 is 
+select first_name,last_name, hire_date,salary from employees where department_id = 90;
+c1rec c1%ROWTYPE;
+nombre varchar2(20);
+apellido varchar2(20);
+fecha date;
+salario number(8,2);
+
+begin
+OPEN c1;
+LOOP
+ FETCH C1 INTO nombre,apellido,fecha,salario;
+      EXIT WHEN C1%NOTFOUND;
+DBMS_OUTPUT.PUT_LINE(nombre || ' ' || apellido || ' ' || fecha || ' ' || salario );
+end loop;
+close c1;
+end;
+
+3--
+set SERVEROUTPUT on;
+declare 
+cursor c1 is 
+select first_name,last_name,salary from employees where department_id in (90,120,160,140);
+c1rec c1%ROWTYPE;
+nombre varchar2(20);
+apellido varchar2(20);
+fecha date;
+salario number(8,2);
+
+begin
+OPEN c1;
+LOOP
+ FETCH C1 INTO nombre,apellido,fecha,salario;
+      EXIT WHEN C1%NOTFOUND;
+DBMS_OUTPUT.PUT_LINE(nombre || ' ' || apellido || ' ' || fecha || ' ' || salario );
+end loop;
+close c1;
+end;
+
+
+
+select department_id,count(*) as numero_empleados ,sum(salary) as valor_nomina  from employees 
+where department_id in (90,60,100) group by  department_id  ORDER BY department_id ASC;
+
+
+select first_name,last_name,department_id,sum(salary),salary  from employees 
+where department_id in (90,60,100) group by  first_name,last_name,department_id,salary  ORDER BY department_id ASC;
+select *from employees;

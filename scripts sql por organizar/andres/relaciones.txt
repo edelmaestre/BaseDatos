@@ -1,0 +1,112 @@
+select department_id,department_name,location_id,city
+from departments
+natural join locations;
+
+select employee_id,last_name,
+location_id,department_id
+from employees join departments
+using (department_id);
+
+select last_name,salary from employees;
+
+select department_name,first_name,salary
+from employees join departments
+USING(department_id);
+
+select first_name,department_id from employees;
+select first_name,salary FROM employees WHERE department_id is null;
+select first_name,salary FROM employees WHERE department_id is not null;
+select *from departments;
+*******************
+parcial
+
+SELECT sum(MUNICIPIO.poblacion), dp.nombre
+FROM MUNICIPIO  inner join DEPARTAMENTOS dp on MUNICIPIO.departa_id = dp.DEPAR_ID
+GROUP BY MUNICIPIO.DEPARTA_ID, dp.nombre
+ORDER BY sum(poblacion) ASC;
+
+SELECT jh.employee_id as CEDULA ,jh.start_date,jh.end_date, jh.job_id, bs.JOB_TITLE FROM job_history jh
+inner join jobs bs on jh.JOB_ID = bs.job_id where jh.EMPLOYEE_ID =102;
+
+ SELECT e.last_name AS NOMBRE,j.job_title AS NOMBRE_DEL_CARGO, d.department_name,
+ round((SYSDATE-E.hire_Date)/365) AS AÑOS_DE_INTIGUEDAD
+FROM employees e INNER JOIN jobs j ON e.job_id = j.job_id
+INNER JOIN departments D ON  e.department_id = d.department_id
+WHERE round((SYSDATE-E.hire_Date)/365) >10;
+ 
+ SELECT  CONCAT(e.FIRST_NAME,e.LAST_NAME) AS 
+EMPLEADO, CONCAT(M.FIRST_NAME,M.LAST_NAME) AS TRABAJA_PARA ,e.SALARY AS SALARIO, e.COMMISSION_PCT AS COMISION
+FROM employees M  INNER JOIN employees e
+ON M.employee_id=e.manager_id 
+ WHERE e.COMMISSION_PCT>0.1 AND M.employee_id IN (
+SELECT DISTINCT(E.manager_id) FROM employees E ) ;
+
+select DISTINCT(department_id)from employees;
+select e.employee_id,e.last_name,e.department_id,
+    d.department_id,d.location_id
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id);
+
+SELECT employee_id,city,department_name
+FROM employees e
+JOIN departments d
+ON d.department_id = e.department_id
+JOIN locations l
+ON d.location_id = l.location_id;
+
+select e.last_name,e.department_id,d.department_name
+from employees e LEFT OUTER JOIN departments d
+ON (e.department_id =d.department_id);
+
+select e.last_name,e.department_id,d.department_name
+from employees e RIGHT OUTER JOIN departments d
+ON (e.department_id =d.department_id);
+
+*********************************
+FUNCIONES AGREGADAS 
+********************************
+select last_name,first_name,salary,department_id from employees where department_id in ('100','90','30','50') ORDER BY department_id
+
+select COUNT(salary) from employees;
+select MIN(salary) from employees;
+select MAX(salary) from employees;
+select AVG(salary) from employees;
+SELECT SUM(salary) from employees where job_id='IT_PROG';
+SELECT AVG(salary),MAX(salary),MIN(salary),SUM(salary) from employees where job_id LIKE '%REP%';
+select last_name,first_name,salary,hire_date from employees where hire_date ='13/01/01';
+**************
+SUBCONSULTA
+select last_name,first_name,salary,hire_date from employees where hire_date =(SELECT MIN(hire_date) from employees);
+**************
+select COUNT(department_id) from employees where department_id='90';
+select COUNT(*) from employees where department_id='90';
+select AVG(NVL(commission_pct,0)) from employees;
+NVL toma los valores null;
+****************
+GROUP BY
+select department_id, SUM(salary) FROM employees GROUP BY department_id ORDER BY SUM(salary) ASC;
+select department_id, SUM(salary) FROM employees GROUP BY department_id HAVING SUM(salary)>20000 ORDER BY SUM(salary) ASC;
+
+**********
+HAVING
+SELECT nombre_columna1, SUM(nombre_columna2)
+FROM nombre_tabla
+[ GROUP BY nombre_columna1 ]
+HAVING (condición de función aritmética)
+
+SELECT nombre_tienda, SUM(ventas)FROM tienda_info
+GROUP BY nombre_tiendaHAVING SUM(ventas) > 1500 
+
+************
+IN
+SELECT column_name(s)FROM table_nameWHERE column_name IN (value1, value2, ...);
+SELECT * FROM CustomersWHERE Country IN ('Germany', ‘Mexico', 'UK');
+***********
+BETWEEN
+SELECT column_name(s)FROM table_nameWHERE column_name BETWEEN value1 AND value2;
+SELECT * FROM ProductsWHERE Price BETWEEN 10 AND 20;
+**********
+JOIN
+Una cláusula JOIN se utiliza para combinar filas de dos o más tablas, en función de una columna relacionada entre ellas.
+
+SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDateFROM OrdersINNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
