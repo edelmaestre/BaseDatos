@@ -1,0 +1,262 @@
+-- Generado por Oracle SQL Developer Data Modeler 19.1.0.081.0911
+--   en:        2019-11-14 20:10:22 COT
+--   sitio:      Oracle Database 11g
+--   tipo:      Oracle Database 11g
+
+
+
+CREATE TABLE abogado (
+    id_abogado           INTEGER NOT NULL,
+    nombre               VARCHAR2(10),
+    apellido             VARCHAR2(10),
+    email                VARCHAR2(20),
+    usuario_usuario_id   NUMBER NOT NULL
+);
+
+CREATE UNIQUE INDEX abogado__idx ON
+    abogado (
+        usuario_usuario_id
+    ASC );
+
+ALTER TABLE abogado ADD CONSTRAINT abogado_pk PRIMARY KEY ( usuario_usuario_id,
+                                                            id_abogado );
+
+CREATE TABLE demandado (
+    id_demandado            INTEGER NOT NULL,
+    nom_demandado           VARCHAR2(30),
+    apellido                VARCHAR2(10),
+    direccion               VARCHAR2(20),
+    email                   VARCHAR2(20),
+    telefono                INTEGER,
+    fechanacimiento         DATE,
+    fechaexpedicioncedula   DATE,
+    genero                  CHAR(2),
+    pr_dem_pr_dem_id        NUMBER NOT NULL
+);
+
+ALTER TABLE demandado ADD CONSTRAINT demandado_pk PRIMARY KEY ( id_demandado );
+
+CREATE TABLE demandante (
+    id_demandante           INTEGER NOT NULL,
+    nom_demandante          VARCHAR2(30),
+    apellido                VARCHAR2(10),
+    direccion               VARCHAR2(20),
+    email                   VARCHAR2(20),
+    telefono                INTEGER,
+    fechanacimiento         DATE,
+    fechaexpedicioncedula   DATE,
+    genero                  CHAR(2),
+    pro_dem_proc_dem_id     NUMBER NOT NULL
+);
+
+ALTER TABLE demandante ADD CONSTRAINT demandante_pk PRIMARY KEY ( id_demandante );
+
+CREATE TABLE departamento (
+    id_departamento       INTEGER NOT NULL,
+    nombre_departamento   VARCHAR2(10),
+    id_municipio          INTEGER
+);
+
+ALTER TABLE departamento ADD CONSTRAINT departamento_pk PRIMARY KEY ( id_departamento );
+
+CREATE TABLE expediente (
+    id_expediente        INTEGER NOT NULL,
+    id_radicado          VARCHAR2(20),
+    juzgado_id_juzgado   INTEGER NOT NULL
+);
+
+ALTER TABLE expediente ADD CONSTRAINT expediente_pk PRIMARY KEY ( id_expediente );
+
+CREATE TABLE juzgado (
+    id_juzgado       INTEGER NOT NULL,
+    nombre_juzgado   VARCHAR2(30),
+    id_expediente    INTEGER
+);
+
+ALTER TABLE juzgado ADD CONSTRAINT juzgado_pk PRIMARY KEY ( id_juzgado );
+
+CREATE TABLE municipio (
+    id_municipio        INTEGER NOT NULL,
+    nombre_municipio    VARCHAR2(18),
+    depart_id_depart1   INTEGER NOT NULL
+);
+
+ALTER TABLE municipio ADD CONSTRAINT municipio_pk PRIMARY KEY ( id_municipio );
+
+CREATE TABLE proc_deman (
+    id_radicado     INTEGER,
+    id_demandante   INTEGER,
+    pro_dem_id      NUMBER NOT NULL
+);
+
+ALTER TABLE proc_deman ADD CONSTRAINT proceso_demandante_pk PRIMARY KEY ( pro_dem_id );
+
+CREATE TABLE proc_demand (
+    id_radicado      INTEGER,
+    id_demandado     INTEGER,
+    proc_demand_id   NUMBER NOT NULL
+);
+
+ALTER TABLE proc_demand ADD CONSTRAINT pr_dem_pk PRIMARY KEY ( proc_demand_id );
+
+CREATE TABLE proceso (
+    id_radicado                VARCHAR2(20) NOT NULL,
+    id_demandado               VARCHAR2(12),
+    id_demandante              VARCHAR2(12),
+    asunto                     VARCHAR2(40),
+    id_estado                  VARCHAR2(15),
+    id_proceso                 INTEGER,
+    id_departamento1           INTEGER,
+    fecha_inicial              DATE,
+    fecha_final                DATE,
+    id_juzgado                 INTEGER,
+    expediente_id_expediente   INTEGER NOT NULL,
+    id_abogado1                INTEGER NOT NULL,
+    abogado_id_abogado         NUMBER NOT NULL,
+    dep_id_depa                INTEGER NOT NULL,
+    municipio_id_municipio     INTEGER NOT NULL,
+    tipo_proceso_id_proceso    INTEGER NOT NULL,
+    pr_de_pr_dem_id            NUMBER NOT NULL
+);
+
+ALTER TABLE proceso ADD CONSTRAINT proceso_pk PRIMARY KEY ( id_radicado );
+
+CREATE TABLE tipo_proceso (
+    id_proceso            INTEGER NOT NULL,
+    nombre_tipo_proceso   VARCHAR2(10),
+    id_radicado           VARCHAR2(20) NOT NULL,
+    id_abogado            INTEGER NOT NULL,
+    proceso_id_radicado   VARCHAR2(20) NOT NULL,
+    proceso_id_abogado    INTEGER NOT NULL
+);
+
+ALTER TABLE tipo_proceso ADD CONSTRAINT tipo_proceso_pk PRIMARY KEY ( id_proceso );
+
+CREATE TABLE usuario (
+    cedula_abogado   INTEGER,
+    nombreusuario    VARCHAR2(20),
+    password         VARCHAR2(4000),
+    tipo_usuario     VARCHAR2(15),
+    usuario_id       NUMBER NOT NULL
+);
+
+ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( usuario_id );
+
+ALTER TABLE abogado
+    ADD CONSTRAINT abogado_usuario_fk FOREIGN KEY ( usuario_usuario_id )
+        REFERENCES usuario ( usuario_id );
+
+ALTER TABLE demandado
+    ADD CONSTRAINT de_pr_de_fk FOREIGN KEY ( pr_dem_pr_dem_id )
+        REFERENCES proc_demand ( proc_demand_id );
+
+ALTER TABLE demandante
+    ADD CONSTRAINT dem_pr_de_fk FOREIGN KEY ( pro_dem_proc_dem_id )
+        REFERENCES proc_deman ( pro_dem_id );
+
+ALTER TABLE expediente
+    ADD CONSTRAINT expediente_juzgado_fk FOREIGN KEY ( juzgado_id_juzgado )
+        REFERENCES juzgado ( id_juzgado );
+
+ALTER TABLE municipio
+    ADD CONSTRAINT municipio_departamento_fk FOREIGN KEY ( depart_id_depart1 )
+        REFERENCES departamento ( id_departamento );
+
+ALTER TABLE proceso
+    ADD CONSTRAINT pr_pr_de_fk FOREIGN KEY ( pr_de_pr_dem_id )
+        REFERENCES proc_deman ( pro_dem_id );
+
+ALTER TABLE proceso
+    ADD CONSTRAINT proceso_abogado_fk FOREIGN KEY ( abogado_id_abogado )
+        REFERENCES abogado ( usuario_usuario_id,
+                             id_abogado );
+
+ALTER TABLE proceso
+    ADD CONSTRAINT proceso_expediente_fk FOREIGN KEY ( expediente_id_expediente )
+        REFERENCES expediente ( id_expediente );
+
+ALTER TABLE proceso
+    ADD CONSTRAINT proceso_municipio_fk FOREIGN KEY ( municipio_id_municipio )
+        REFERENCES municipio ( id_municipio );
+
+ALTER TABLE proceso
+    ADD CONSTRAINT proceso_tipo_proceso_fk FOREIGN KEY ( tipo_proceso_id_proceso )
+        REFERENCES tipo_proceso ( id_proceso );
+
+CREATE SEQUENCE proc_deman_pro_dem_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER proc_deman_pro_dem_id_trg BEFORE
+    INSERT ON proc_deman
+    FOR EACH ROW
+    WHEN ( new.pro_dem_id IS NULL )
+BEGIN
+    :new.pro_dem_id := proc_deman_pro_dem_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE proc_demand_proc_demand_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER proc_demand_proc_demand_id_trg BEFORE
+    INSERT ON proc_demand
+    FOR EACH ROW
+    WHEN ( new.proc_demand_id IS NULL )
+BEGIN
+    :new.proc_demand_id := proc_demand_proc_demand_id_seq.nextval;
+END;
+/
+
+CREATE SEQUENCE usuario_usuario_id_seq START WITH 1 NOCACHE ORDER;
+
+CREATE OR REPLACE TRIGGER usuario_usuario_id_trg BEFORE
+    INSERT ON usuario
+    FOR EACH ROW
+    WHEN ( new.usuario_id IS NULL )
+BEGIN
+    :new.usuario_id := usuario_usuario_id_seq.nextval;
+END;
+/
+
+
+
+-- Informe de Resumen de Oracle SQL Developer Data Modeler: 
+-- 
+-- CREATE TABLE                            12
+-- CREATE INDEX                             1
+-- ALTER TABLE                             22
+-- CREATE VIEW                              0
+-- ALTER VIEW                               0
+-- CREATE PACKAGE                           0
+-- CREATE PACKAGE BODY                      0
+-- CREATE PROCEDURE                         0
+-- CREATE FUNCTION                          0
+-- CREATE TRIGGER                           3
+-- ALTER TRIGGER                            0
+-- CREATE COLLECTION TYPE                   0
+-- CREATE STRUCTURED TYPE                   0
+-- CREATE STRUCTURED TYPE BODY              0
+-- CREATE CLUSTER                           0
+-- CREATE CONTEXT                           0
+-- CREATE DATABASE                          0
+-- CREATE DIMENSION                         0
+-- CREATE DIRECTORY                         0
+-- CREATE DISK GROUP                        0
+-- CREATE ROLE                              0
+-- CREATE ROLLBACK SEGMENT                  0
+-- CREATE SEQUENCE                          3
+-- CREATE MATERIALIZED VIEW                 0
+-- CREATE MATERIALIZED VIEW LOG             0
+-- CREATE SYNONYM                           0
+-- CREATE TABLESPACE                        0
+-- CREATE USER                              0
+-- 
+-- DROP TABLESPACE                          0
+-- DROP DATABASE                            0
+-- 
+-- REDACTION POLICY                         0
+-- 
+-- ORDS DROP SCHEMA                         0
+-- ORDS ENABLE SCHEMA                       0
+-- ORDS ENABLE OBJECT                       0
+-- 
+-- ERRORS                                   0
+-- WARNINGS                                 0
