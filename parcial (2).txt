@@ -1,0 +1,21 @@
+
+
+
+2.SELECT e.LAST_NAME ||'TRABAJA PARA'|| d.manager_id, SALARY, e.commission_pct FROM EMPLOYEES e join departments d on(e.department_id=d.department_id) where commission_PCT > 0.01 ;
+
+3. 
+SELECT EMPLOYEES.LAST_NAME,DEPARTMENTS.DEPARTMENT_NAME,LOCATIONS.CITY FROM EMPLOYEES RIGHT JOIN DEPARTMENTS ON EMPLOYEES.DEPARTMENT_ID=DEPARTMENTS.DEPARTMENT_ID INNER JOIN LOCATIONS ON DEPARTMENTS.LOCATION_ID=LOCATIONS.LOCATION_ID;
+ 
+
+4.)SELECT e.last_name, j.job_title, d.DEPARTMENT_NAME,  (2019 - EXTRACT (YEAR FROM hire_date))year_antiguedad 
+FROM employees e left join departments d on (e.department_id= d.department_id) left join jobs j on (e.job_id=j.job_id)
+WHERE (2019 - EXTRACT (YEAR FROM hire_date)) IN (6,10,11,15,16,17);
+
+
+
+
+
+
+
+143-141- mas de 10 años y debe salir cler
+
