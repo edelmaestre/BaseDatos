@@ -1,0 +1,390 @@
+select * from tabla; para mostrar elementos guardados en una tabla o registros
+* se refiere a todos los elementos
+from para decir en que tabla
+
+
+select cedula,apellido from persona
+
+
+where (es un condicional) se utiliza para obtener aquellos datos que cumplan la condicion expresada
+select columna1,columna2, from tabla where condicion;
+
+seleccionar de personas personas con edad mayor a 21
+select * from persona where edad>21;    
+
+nombre direccion ciudad de personas con salario mayor a 1000000
+select nombre, ciudad, direccion from personas where salary > 1000000;
+
+AND, OR, NOT,
+
+
+
+--And
+se desea seleccionar de la tabla persona que sea jesus y apellido garcia
+select * from persona where nombre=jesus and apellido=garcía;
+
+
+--or
+
+de la tabla persona nombre jesus o cedula 120
+select * from personas where nombre=jesus or cedula="120";
+
+-- not
+seleccione personas donde la cedula no sea 100
+
+--order by
+permite ordenar los resultados de una consulat
+ 
+ASC/DESC;
+ordena por apellido
+select * from empleado order by apellido; (por defecto es ascendente)
+
+ordena la tabla descendentemente
+select * from empleado order by salary DESC;
+
+--between selecciona valores dentro de un rango (numeros textos o fechas)
+select * from persona where edad between 19 and 22;
+
+-like
+se utiliza en una clausula where para buscar un patron especificado en una columna
+
+(se buscan textos o letras)
+
+-hay 2 comodines 
+% representa cero o uno o varios caracteres
+
+% ana = busca los que termine en ana;
+ana % = busca que comiencen con ana;
+% ana % = busca los textos que contengan ana en cualquier punto;
+
+
+_el subrayado representa un solo caracter
+
+
+se desea conocer empleado que contenga la letra o en su apellido
+select * from empleado where apellido like '%o%';
+
+-desbloquear hr
+SQL> ALTER SESSION SET container = XEPDB1;
+SQL> ALTER USER hr IDENTIFIED BY hr ACCOUNT UNLOCK;
+
+Disctint; lo usamos para eliminar todos los repetidos 
+select disctint columna from tabla where condicion;
+
+
+select table_name from user_tables; 
+
+
+------------------------------------------------------------------------------------------------------
+21/ oct /2019
+
+
+--clic en en el mas
+
+normalmente se conecta a un esquema: Es un conjunto de objetos pueden ser tab: que pertenecen a un usuario. ese usuario que es dueño de ese objeto se le llama propietario. esos objetos son tablas, usuarios, roles, secuencias, disparadores, funciones, paquetes, (el propietario es quien lo crea).
+--si se borra el usiario se borra todo lo anterior.
+--el esquema es un usuario.
+
+--se nombra CNXHR cnx s la coneccion y hr porque es el usuario hr
+
+
+1)por consola
+
+-connect system/root@localhost:1521/xepdb1;
+-alter user hr identified by hr;
+
+2.) por pantalla grafica
+
+--para ver las tablas de mi usuario
+SELECT table_name FROM user_tables;
+
+--crl enter para seleccionar y correr;
+
+-- mostrar registro de empleados ordenados;
+
+SELECT * 
+FROM employees
+ORDER BY last_name;
+
+-- mostrar registro de empleados ordenados desdendente;
+
+SELECT * 
+FROM employees
+ORDER BY last_name;
+
+--codigo salario apellido departamento cargo ordenados por departamentos
+
+SELECT employee_id, last_name, job_id, department_id 
+FROM employees
+ORDER BY department_id desc;
+
+--empleados que trabajen en el depaartamento 10 y 20
+
+SELECT * FROM employees where department_id=10 or department_id=20;
+
+SELECT * FROM employees where department_id in (10,20,30);
+
+--quienes ganan 5000 a 10000 en la empresa;
+
+SELECT last_name, salary FROM employees where salary between 5000 and 10000; 
+
+--nombre del empleado y departamento ordenado por departamento de menor a mayor
+
+SELECT first_name, department_id FROM employees ORDER BY department_id;
+
+--departamentos de la empresa
+SELECT DISTINCT department_id from employees;
+
+--cuales departamentos tiene la empresa
+select department_name, department_id from departments; 
+
+
+
+--cuales son los cargos de la empresa
+SELECT job_title from jobs;
+
+--cuales son los cargos que tienen empleados
+
+select DISTINCT job_id from employees;
+
+--mostrar cargos y empleados que ganan menos de 3000
+
+select first_name, salary from employees where salary < 3000;
+
+--apellido y salario de los epleados que su apellido comiencen con an
+
+select first_name, last_name, salary from employees where last_name like 'An%';
+
+--los que no ganan comision
+select first_name, last_name, salary, commission_pct from employees where commission_pct is null; 
+--los que ganan comision
+select first_name, last_name, salary, commission_pct from employees where commission_pct is not null; 
+
+--para poner alias
+select first_name, last_name as "apellido del empleado", salary, commission_pct as commision from employees where commission_pct is not null; 
+
+--
+select last_name||' '||first_name as "Nombre y apellido" from employees;
+
+
+--------------------------------------------------------------------------------------------------
+join
+-relacionados tablas por aquellas columnas que se llamen iguales 
+-si las columnas que tiwnwn los mismos nombres tienen diferentes tipo de datos se devuelve un error
+
+
+SELECT department_id, department_name, location_id, city
+FROM departments
+NATURAL JOIN locations;
+
+--
+SELECT department_id, department_name, location_id, city
+FROM departments
+NATURAL JOIN locations;
+
+
+--id empleado, id jefe, nombre departamento
+
+SELECT employee_id, manager_id, department_name 
+from employees
+NATURAL JOIN departments order by manager_id;
+
+SELECT employee_id, manager_id, department_name 
+from departments
+NATURAL JOIN  employees;
+
+SELECT employee_id, first_name, manager_id, department_name, department_id 
+from employees
+NATURAL JOIN departments order by manager_id;
+
+
+--tarea identificar los jefes porque no salen algunos jefes
+
+select employee_id, nombre empleado id departament, id manager
+
+
+
+-Using
+
+--
+SELECT department_id, department_name, location_id, city
+FROM departments
+NATURAL JOIN locations;
+
+
+--id empleado, id jefe, nombre departamento
+
+SELECT employee_id, manager_id, department_name 
+from employees
+NATURAL JOIN departments order by manager_id;
+
+SELECT employee_id, manager_id, department_name 
+from departments
+NATURAL JOIN  employees;
+
+SELECT employee_id, first_name, manager_id, department_name, department_id 
+from employees
+NATURAL JOIN departments order by manager_id;
+
+--tarea identificar los jefes porque no salen algunos jefes
+
+select employee_id, nombre empleado id departament, id manager
+
+--usando join
+
+select employee_id, last_name, location_id 
+from employees
+join departments
+using (department_id);
+
+--On
+
+para especificar condiciones arbotrarias o unir
+
+
+--nombre, id depart, nomdepartment, nom empleado, salario ordenados. id departamento
+
+select e.first_name, d.department_id, d.department_name, e.employee_id, e.salary
+from employees e 
+join departments d
+on (e.department_id = d.department_id);
+
+select e.last_name, d.department_id, d.department_name,
+from employees e 
+right join departments d
+on (e.department_id = d.department_id);
+
+
+----------------------------------------------------------------------
+28/oct/2019
+
+tarea: averiguar subconsultas
+
+funcion grupo Columna
+
+
+todos se ejecutan sobre la columna seleccionada
+-max(salary)=devuelve quien gana mas en la empresa
+-sum(salario)=nomina total que tiene que pagar la empresa(lo que lepaga a todo el mundo)
+-count salary();
+-count (department_id)=106;
+-count(commision_pct)= 35;
+
+-las funciones de grupo no tiene en ecuenta los valores nulos.
+
+-avg(salary)
+
+maximo y minimo y promedio a la columna salary
+
+--toda columna de la lista del select 	uee no tenga una funcion de grupo debe estar dentro del group by.
+
+select salary, last_name from employees where salary = 24000;
+
+count salary count commision pct
+
+count(commision_pct ) 
+
+select count(salary) from employees ;
+
+select count(department_id) from employees ;
+
+select count(commission_pct) from employees;
+
+
+---cuanto vale la nomina de los empleados que trabajan como programadores
+
+select sum(salary) from employees;
+
+select employee_id, last_name from employees where job_id=IT_PROG;
+
+
+----selec id ordenado por departamento
+--select distinct(department_id)from employees
+--salario promedio de la empressa
+
+describe employees;
+
+
+--averiguar el round
+SELECT department_id, round(AVG(salary),2)
+FROM employees
+
+GROUP BY department_id ;
+
+select department_id, job_id, salary from employees group by department_id, job_id;
+select department_id, job_id, sum(salary) 
+from employees 
+group by department_id, job_id 
+order by department_id;
+
+
+
+--SELECT department_id, MAX(salary)
+FROM employees
+GROUP BY department_id
+HAVING MAX(salary)>10000 
+order by department_id;
+
+
+--retornar si es mayor de edad o menor
+
+select year (sysdate), month (sysdate) from dual;
+
+ select current_timestamp from dual;
+ 
+ select to_char(sysdate,'MM') from dual;
+
+ select to_char(sysdate,'YYYY') from dual;
+ 
+  select to_char(sysdate,'DD') from dual;
+  
+  select 2+2 from dual;
+  
+  select sin (90) from dual;
+  
+  select sqrt(4) from dual
+---------------------------------------------------------------------
+30/oct/2019
+
+NOrmalizacion
+es una serie de reglas que se aplican 
+
+-Para evitar la redundancia de los datos
+-una base de Datos debe estar normalizada hasta la 3ra forma normal
+
+--redundancia: valores repetidos de manera innnecesaria (siempre se van a repetir pero se debe reducir al minimo la redundancia)
+
+--Primera forma Normal:
+todo dato debe tener un identificador único (solo con ser tabla en la tabla relacional
+-lleve sus atributos
+-el alor de cada aatributo sea atomico e indivisible
+-llaves primaria
+-orden de los atributos no interesa
+)
+
+-inconsistencia: no concuerda el dato con la informacion real
+-fallo de integridad: meter carrera(una carrera que no existe)
+-- integridad referencial (mantener la integridad)
+
+
+
+--Dependencia funcional:
+dado dos atributos que conocidos el valor de uno automaticamente se conoce el valor del otro
+
+--Dependencia transitiva
+Por transitividad a deterbina a b y b determina a c o sea que a determina a c transitivamente
+
+
+----segunda fprma Normal
+
+La tabla debe estar en primera forma normal y todo atributo que no sea llave debe tener 
+
+-- tarea:
+-averiguar que es un rol
+-que es un privilegio o un permiso
+-cual es la tabla del diccionario de datos de oracle donde se almacenan los privilegios
+-obtener a travez de una consulata todos los privilegios que comienzan con create.
+
+
+--crear un usuario (nuesto nombre)
+--crear un esquema con un usuario que permita insertar las tablas, diseñadas, en el paso anterior del ejemplo de alumnos

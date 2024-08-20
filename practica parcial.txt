@@ -1,0 +1,19 @@
+1.) select e.last_name, e.salary, j.job_title, l.city 
+from employees e, jobs j, departments d, locations l  
+where  e.first_name like '%a' and ((select to_char(sysdate,'YYYY') from dual) - (select to_char(hire_date,'YYYY') from dual))>10
+and e.job_id = (select job_id from employees where employee_id = '143')
+and e.salary = (select salary from employees where  employee_id = '141') 
+and e.job_id = j.job_id 
+and e.department_id = d.department_id 
+and d.location_id = l.location_id ; 
+
+2.) SELECT e.LAST_NAME ||' TRABAJA PARA '|| (select eaux.last_name from employees eaux where eaux.employee_id = e.manager_id), SALARY, e.commission_pct FROM EMPLOYEES e where e.commission_PCT > 0.01 ; 
+
+3.) SELECT EMPLOYEES.LAST_NAME,DEPARTMENTS.DEPARTMENT_NAME,LOCATIONS.CITY FROM EMPLOYEES RIGHT JOIN DEPARTMENTS ON EMPLOYEES.DEPARTMENT_ID=DEPARTMENTS.DEPARTMENT_ID INNER JOIN LOCATIONS ON DEPARTMENTS.LOCATION_ID=LOCATIONS.LOCATION_ID;
+
+4.) SELECT e.last_name, j.job_title, d.DEPARTMENT_NAME,  ((select to_char(sysdate,'YYYY') from dual) - (select to_char(hire_date,'YYYY') from dual))year_antiguedad 
+FROM employees e left join departments d on (e.department_id= d.department_id) left join jobs j on (e.job_id=j.job_id)
+WHERE ((select to_char(sysdate,'YYYY') from dual) - (select to_char(hire_date,'YYYY') from dual)) IN (6,10,11,15,16,17);
+
+5.) select * from employees e where e.salary = (select min(salary) from employees where employees.department_id = e.department_id) and  e.hire_date > '01/01/2005';  
+

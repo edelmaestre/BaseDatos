@@ -1,0 +1,23 @@
+-crear tablespace alumno de 5o mb
+-crear usuario propietario de esquema
+-asignar privilegios
+
+-tablas facultad y programas
+-ingresar datos
+
+-tarea:
+--crear modelo completo de alumnos
+--crear un txt que se llame crear esquemas
+        -crear tablespace
+        -crear usuario
+        -asignar provilegios
+--crear segundo archivo crear tablas.txt 
+	-sentecias para crear tablas
+	-crear llaves primarias
+	-foraneas regla de checheo y valores por defecto
+	
+--crear 3 archivo insertar datos.txt 
+	-insercion de datos (inserts de cada una de las tablas que 	pertenecen al esquema)
+	-
+	
+	

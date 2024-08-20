@@ -1,0 +1,20 @@
+1
+select last_name, job_id, salary from employees where job_id=(select job_id from employees where employee_id ='143') and salary >(select salary from employees where employee_id = '141') and last_name like '%a%' and ((sysdate - hire_date)/365)>10;
+
+
+2
+SELECT e.LAST_NAME, as TRABAJA PARA, d.manager_id, SALARY, e.commission_pct FROM EMPLOYEES e join departments d on(e.department_id=d.department_id) where commission_pct > 0.01 ;
+
+
+
+4
+select Last_name, first_name, ROUND(months_between(sysdate,hire_date)/12) as year from employees where ROUND(months_between(sysdate,hire_date)/12) = 6 or ROUND(months_between(sysdate,hire_date)/12) >= 10 or ROUND(months_between(sysdate,hire_date)/12) <=17;
+
+3
+select e.last_name, d.department_name, l.location_id, l.city from  employees e inner join departments d ON e.DEPARTMENT_ID = d.DEPARTMENT_ID INNER JOIN locations l ON d.LOCATION_ID= l.LOCATION_ID; where d.department_id is  null;
+
+
+
+
+5
+SELECT * FROM EMPLOYEES e WHERE (SELECT MIN(d.salary) FROM employees d WHERE d.department_id = e.department_id) = e.SALARY;
