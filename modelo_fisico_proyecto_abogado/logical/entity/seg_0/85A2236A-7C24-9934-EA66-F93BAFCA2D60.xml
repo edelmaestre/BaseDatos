@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="85A2236A-7C24-9934-EA66-F93BAFCA2D60" name="Demandado">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id demandado" id="DC19EDA1-8F97-5AEE-22B4-DCADBCC44D2B">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nom demandado" id="155BCC5C-D2B6-5A5C-B45D-43E64BEE30A2">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellido" id="A305BF81-2B6C-75FF-D78A-6E5E935E3A45">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="DCEAEC10-9915-9EB3-79CC-8ED9E4314201">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="CAA4715C-FFB8-D21C-3434-4F7FCD310102">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="51AF9984-B8A8-066D-EA98-679E2511D21A">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechaNacimiento" id="BDEED8FB-3906-334A-6EAE-A639E87B8741">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechaExpedicionCedula" id="983A5778-BC5C-1E94-A64D-9807486105DF">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="genero" id="9E5B9D36-7BF8-28E3-4861-05376AEA4FCE">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B26EE827-B9FC-CE98-24D7-8396979AACCC" name="Demandado_PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:21:25 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DC19EDA1-8F97-5AEE-22B4-DCADBCC44D2B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

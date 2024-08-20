@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E6FF39C6-CC77-961C-0087-ADC992332103" name="Proceso Demandante">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:37:35 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id Radicado" id="2D844691-A98C-6358-72EC-883F786686C0">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:37:35 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id demandante" id="85A1CAD7-A4D7-267C-9A9D-2867CC8B9D58">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:37:35 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

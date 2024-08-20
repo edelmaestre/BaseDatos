@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="36C71FFD-8C4D-B706-935D-FDFB92AF2E3F" name="usuario">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-13 18:22:50 UTC</createdTime>
+<generatorID>5BCADBA4-923C-AD7A-31B1-DB3CF13FA5EC</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="usuario_ID" id="DE4F7F80-6767-23E1-0673-811E6CEEE255">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-13 18:22:50 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="cedula_abogado" id="5C917E6D-245F-44D6-87C8-BCC9FD77D1B5">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-13 18:22:50 UTC</createdTime>
+<generatorID>0F9CF339-E201-8BF4-431C-299B1F3B9CE5</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NombreUsuario" id="0F965D37-6DAD-ACDC-C99C-9CA868C98451">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-13 18:22:50 UTC</createdTime>
+<generatorID>48C82DC9-59C6-A866-A194-6CACDF8CF997</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="password" id="DA71FCDF-706F-1130-8069-138D80BCAA48">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-13 18:22:50 UTC</createdTime>
+<generatorID>D12814B8-6D41-849F-C537-03771FEE12DE</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="54DDC95C-FFF4-F556-D30F-64C6798BEDF8" name="usuario_PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-13 18:22:50 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="DE4F7F80-6767-23E1-0673-811E6CEEE255"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

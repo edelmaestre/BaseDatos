@@ -1,0 +1,289 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="93BE8573-7AD5-EE42-E56C-207C891CD611" name="Proceso">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>9BE562A8-A386-EA17-B3BA-C5D4CF815872</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_Radicado" id="FC872B75-040B-A53C-99DA-9D81990A3974">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>ADFD5244-7AA7-695E-6921-8E6FE1DC9313</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_demandado" id="0AD7155A-8F91-20C2-9B0B-E7594A6C4022">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>367A7680-27C1-B398-6BF8-A743963BEA95</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_demandante" id="873171A4-350A-7898-EBEF-3513875F852E">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>1146C571-91DE-FD83-A962-08A3634E5CF2</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="asunto" id="356D1E3F-2365-3927-13C0-B53834EE651C">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>7C2E31F9-5EA6-01F3-0322-6E8FE432122C</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_estado" id="8FC39254-F7F5-7DEB-BE1A-04DE4F275A7D">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>368A75CF-1884-D198-40EC-1C0B4902AE42</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_proceso" id="94F25683-E697-6773-E5D1-1A4AF71EFFF6">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>027F8ED5-995E-A864-55AB-EAAEE371FB94</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_departamento1" id="D81BE24B-E315-E222-9066-602EE510B9A9">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>690FC8E5-0FE5-77B0-73FF-9B947E3D93F7</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_inicial" id="8654CECA-13B9-2C08-37CD-11D5F01CA8D6">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>14A0E251-FE43-0403-0302-658495267BE3</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_final" id="67F4D68C-2EB3-CB12-13B1-4D516ED9377E">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>66B2AD00-2139-632D-D83D-1A4ACBE58F01</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_juzgado" id="F90789B3-85AD-39AD-8D3F-98668C6E7F6D">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>E888F40D-C365-AA1D-CC65-D34DB098B409</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="expediente_id_expediente" id="B6BEE1B6-D5BD-15A0-7504-83C22ADE3663">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>673A5EEC-E5F3-8341-13CA-F7A202A819DD</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7B64EC63-C46C-0C75-20E7-83A5DE82282D" referredColumn="25BE3014-53E0-D17D-863E-F259BEE32B8E"/>
+</associations>
+</Column>
+<Column name="id_abogado1" id="C8AA15AF-6F1E-6630-637D-7AB9107CA547">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>8EBB2499-4A71-DADD-3D1C-74DC6AA52DE0</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="abogado_id_abogado" id="5E128896-62F1-14DE-5DE2-D18B80F71421">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>13FD1F2F-9D4D-D40C-487F-0A55F7E4D923</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7A09D0EC-DC97-7B69-A91A-06F2486E3B3D" referredColumn="726E898B-A6E1-A189-ADD8-4543A4C90737"/>
+</associations>
+</Column>
+<Column name="Departamento_id_departamento" id="6BF686D8-EAD9-EBC9-A94D-32732F8B5247">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>E4912D2F-D10A-B9D7-4F71-D0A09C683F40</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="968EEC3B-6262-07C5-4961-E2BED8957020" referredColumn="D3726606-1869-2106-4543-8E007A8C8CE2"/>
+</associations>
+</Column>
+<Column name="Proc_Dem_Pro_Dema_ID" id="D73F3268-1760-66B9-4F94-A6050A93B478">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ED2C3BE9-9046-7060-B13C-CC20984D00B5" referredColumn="AE81FDF5-38D4-60FC-6C53-4891C49444C7"/>
+</associations>
+</Column>
+<Column name="Proc_Demdant_Proc_Demdant_ID" id="A76C4134-1882-3F5C-C7EE-2E0B951FDF58">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D272FD0C-A738-20B0-530C-1011AE7C74E1" referredColumn="615196C5-A533-D279-774C-751BB2E6D4B3"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1AD2B6D7-0B7E-5CD6-CF57-C158067FF8ED" name="Proceso_PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>21BEB8C4-6987-0964-940F-5B0C14581430</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC872B75-040B-A53C-99DA-9D81990A3974"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A8EEDD17-5148-3F85-7662-EE223B778FC0" name="Proceso_abogado_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>B964EFE7-0D10-77CC-C631-7F3938355FB2</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E128896-62F1-14DE-5DE2-D18B80F71421"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A9AD5734-A6C3-7687-6EA4-6CDE0C1850C4" name="Proc_Depart_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>282C7293-75C5-DD0F-8D52-56AFD62A6950</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BF686D8-EAD9-EBC9-A94D-32732F8B5247"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD648FED-CA61-8297-769E-2B13A3D91AAE" name="Proceso_expediente_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>4ECA3BE6-CAE1-1BA2-380A-5B481A69FA35</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6BEE1B6-D5BD-15A0-7504-83C22ADE3663"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4D3538AB-CCE0-EAC2-ECAF-E8C99B468B39" name="Proc_Proc_Demddo_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>9B5AB2C7-8D18-CBC9-EFC1-3BA52C98B958</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D73F3268-1760-66B9-4F94-A6050A93B478"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45035019-0CCA-6CE8-AA4B-6A791DA0EA39" name="Pro_Proc_Demndt_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>7C80BEEA-D3F3-2C80-4286-FD37E2EF56F0</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A76C4134-1882-3F5C-C7EE-2E0B951FDF58"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

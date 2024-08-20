@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="78834922-2255-8F7F-385F-4E813DA24D50" name="Demandante">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 16:42:14 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id demandante" id="8EABEF05-F996-FD52-2044-744734AA6077">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 16:42:27 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nom demandante" id="B1B88ABC-4C61-364B-61BE-30C614DD6650">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 16:43:33 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellido" id="657E68CB-7BF1-D574-7E3B-AD9CEF5836F4">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 17:16:41 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="00508DFD-0412-A50E-67B9-6A35F709E6DA">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 17:17:37 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="298C4C85-920E-796F-EAE7-43E21227CE20">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 17:19:26 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="4FDCA547-2FA9-DC15-27B3-290252C0244A">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 17:22:26 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechaNacimiento" id="84DCC0E2-E912-0984-0B47-33974A4CD1C5">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:18:48 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechaExpedicionCedula" id="CEC52D8D-4367-F6E4-2F9C-DF4FAD63B0AE">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:19:20 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="genero" id="CC6761DF-AA66-4D1C-C6E6-27587D31D8E1">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:19:59 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CEBA4371-DDBD-7018-D09C-8FA6C2E46134" name="Demandante_PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 16:43:30 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8EABEF05-F996-FD52-2044-744734AA6077</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

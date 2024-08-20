@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Proceso abogado FK" directorySegmentName="seg_0" id="B964EFE7-0D10-77CC-C631-7F3938355FB2">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-06 18:28:37 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<sourcePk>413965F4-A4A3-6154-3920-2B4047518ED8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3F5C359A-126D-2485-9798-3BB714ABA75F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9BE562A8-A386-EA17-B3BA-C5D4CF815872</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

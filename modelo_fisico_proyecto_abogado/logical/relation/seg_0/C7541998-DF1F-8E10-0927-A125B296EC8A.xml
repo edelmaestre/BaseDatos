@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Municipio Departamento FK" directorySegmentName="seg_0" id="C7541998-DF1F-8E10-0927-A125B296EC8A">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-08 04:08:11 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<sourcePk>BBF94409-8DD0-D666-F953-CF5AD3A4E142</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A56731C2-E82E-1453-AA57-A74CD32D9D98</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>09639CD2-2105-8CF7-200E-5EDF1E0B7391</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

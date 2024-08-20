@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D55B0A55-7204-E9C6-41BA-0B9647016C76" name="abogado">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>3F5C359A-126D-2485-9798-3BB714ABA75F</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_abogado" id="726E898B-A6E1-A189-ADD8-4543A4C90737">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>2FF2ED9E-8F10-7098-45A8-C36A2652C9D6</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="DA8488EC-F91A-0B4A-29AD-7D53B9E123FF">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>C74134AB-4E3C-FE57-994B-9AEED6335019</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellido" id="635B2E39-726D-785E-C100-3B1BD4682911">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>2E3BB7E6-E8EA-6347-FBEE-14E37FF645EF</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="CC2E5D8B-B4C3-DDDE-8613-22DABFDE54B0">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>2C28A1A2-A41F-E0C3-C564-FED0AF061A24</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usuario_usuario_ID" id="B4772F3D-8A65-97BA-DF8F-F080C1F3CC0F">
+<createdBy>edama</createdBy>
+<createdTime>2019-07-04 15:58:57 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4D166C0E-D515-56E6-26EB-8A2ED42B7C84" referredColumn="DE4F7F80-6767-23E1-0673-811E6CEEE255"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F3831F35-4192-C3F8-89D1-957BBFABACF4" name="abogado_PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>413965F4-A4A3-6154-3920-2B4047518ED8</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="726E898B-A6E1-A189-ADD8-4543A4C90737"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D12C8E56-E3E7-0342-4E74-C6641ABB37DC" name="abogado__IDX">
+<createdBy>edama</createdBy>
+<createdTime>2019-07-04 15:58:57 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>42960D34-93BA-9BEA-6B35-6465D7C6B887</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="B4772F3D-8A65-97BA-DF8F-F080C1F3CC0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2BF935AF-B010-8147-F468-A7574788317C" name="abogado_usuario_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-07-04 15:57:14 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4772F3D-8A65-97BA-DF8F-F080C1F3CC0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="43DAB290-2DDA-4BED-3699-CA5B091E29E3" name="abogado_usuario_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-07-09 23:42:54 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B4772F3D-8A65-97BA-DF8F-F080C1F3CC0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

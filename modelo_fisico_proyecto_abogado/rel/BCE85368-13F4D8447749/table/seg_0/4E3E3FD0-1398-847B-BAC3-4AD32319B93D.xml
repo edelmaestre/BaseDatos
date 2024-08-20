@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4E3E3FD0-1398-847B-BAC3-4AD32319B93D" name="Proceso_Demandante">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>E6FF39C6-CC77-961C-0087-ADC992332103</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_Radicado" id="20692312-3E79-826A-20DF-E176D9546A1D">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>2D844691-A98C-6358-72EC-883F786686C0</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_demandante" id="FDF36E1B-4408-BAD6-FF9F-105E1BADAE1F">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<generatorID>85A1CAD7-A4D7-267C-9A9D-2867CC8B9D58</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Proceso_Demandante_ID" id="615196C5-A533-D279-774C-751BB2E6D4B3">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3C4D3237-78C5-A9CD-082F-5EE1578A3D20" name="Proceso_Demandante_PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-06-09 00:50:12 UTC</createdTime>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="615196C5-A533-D279-774C-751BB2E6D4B3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

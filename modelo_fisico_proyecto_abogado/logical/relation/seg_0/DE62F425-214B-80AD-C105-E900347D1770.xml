@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="tipo_proceso_Proceso_FK" directorySegmentName="seg_0" id="DE62F425-214B-80AD-C105-E900347D1770">
+<createdBy>edama</createdBy>
+<createdTime>2019-07-04 15:58:31 UTC</createdTime>
+<generatorID>3BF6B227-BDE5-BAB6-23D0-DF4DA6292391</generatorID>
+<ownerDesignName>modelo_fisico_proyecto_abogado</ownerDesignName>
+<engineerTo>
+<item key="BCE85368-A0A8-6EC4-00AD-13F4D8447749" value="true"/>
+</engineerTo>
+<sourcePk>21BEB8C4-6987-0964-940F-5B0C14581430</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9BE562A8-A386-EA17-B3BA-C5D4CF815872</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>037C849D-3CF4-9896-BB34-613E3D6EA82A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
