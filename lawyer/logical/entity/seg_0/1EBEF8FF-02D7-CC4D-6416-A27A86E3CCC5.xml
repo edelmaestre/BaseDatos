@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1EBEF8FF-02D7-CC4D-6416-A27A86E3CCC5" name="proceso_demandado">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 03:23:18 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_radicado" id="94C3C470-B092-2AA0-A4B9-151F329BABE9">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 03:23:46 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_demandado" id="84E59525-581A-13F8-33EB-E08898183819">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 03:24:48 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

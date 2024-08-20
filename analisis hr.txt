@@ -1,0 +1,65 @@
+--Cantidad de registros por tablas
+-select count(location_id) from locations; 
+	-countries=25;
+	-DEPARTMENTS=27;
+	-employees=107;
+	-JOB_HISTORY=10;
+	-JOBS=19;
+	-LOCATIONS=23;
+	-region=4;
+
+--Esto es para ver los nombres de las tablas de un esquema
+	select table_name from user_tables order by table_name;
+
+--nombre de los jefes
+	select distinct e.manager_id,(select aux.last_name from employees aux where aux.employee_id = 		e.manager_id) from employees e where e.manager_id is not null order by manager_id;
+
+-- departamentos que pertenecen a un jefe
+select distinct e.manager_id,(select aux.last_name from employees aux where aux.employee_id = 		e.manager_id) as jefes, d.department_name from employees e join departments d on (e.department_id = d.department_id) where e.manager_id is not null order by manager_id;
+
+
+-- Empleados que tiene king
+select eaux.last_name from employees eaux where (eaux.manager_id = 100);
+
+--cantidad de jefes=18
+	select distinct manager_id, last_name from employees where manager_id is not null;
+
+--Cuantos empleados tiene Cada Jefe
+	select distinct e.manager_id,(select aux.last_name from employees aux where aux.employee_id = 		e.manager_id) as nombre_Jefes, (select count(aux2.employee_id)from employees aux2 where 		aux2.manager_id = e.manager_id) as numero_empleados from employees e where e.manager_id is not 	null order by manager_id;
+
+	codJef   NomjJef     CantEmpl
+	100	King	       14
+	101	Kochhar	        5
+	102	De Haan		1
+	103	Hunold		4
+	108	Greenberg	5
+	114	Raphaely	5
+	120	Weiss		8
+	121	Fripp		8
+	122	Kaufling	8
+	123	Vollman		8
+	124	Mourgos		8
+	145	Russell		6
+	146	Partners	6
+	147	Errazuriz	6
+	148	Cambrault	6
+	149	Zlotkey		6
+	201	Hartstein	1
+	205	Higgins		1
+	(null)	(NULL)	        0
+
+-- los que ganan comision = 35;
+	select last_name from employees where commission_pct is not null;
+
+--codigo y nombre de departamento y sus empleados
+
+	-cantidad de empleados por departamentos (todos) = 27
+		select d.department_id, d.department_name, (select count(aux.employee_id) from 		employees aux where aux.department_id = d.department_id ) as Empleados_A_Cargo from 			departments d ;
+
+	- cantidad de empleados por departamentos (solo los que tienen empleados a cargo) = 11
+		select d.department_id, d.department_name, (select count(aux.employee_id) from 		employees aux where aux.department_id = d.department_id) as Empleados_A_Cargo from 		departments d where manager_id is not null;
+
+-- mostrar detalles de departamentos donde el mayor salario es mayor a 10000
+SELECT * from departments  where department_id in (select department_id from employees having max(salary)>1000 group by  department_id );
+
+--------------------------------------------------------------------------

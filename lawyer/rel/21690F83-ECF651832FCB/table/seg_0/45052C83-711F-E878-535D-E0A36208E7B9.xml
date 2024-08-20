@@ -1,0 +1,180 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="45052C83-711F-E878-535D-E0A36208E7B9" name="demandante">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>3F4240D4-BFE0-EBF2-6A7A-7841B29C4B66</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_demandante" id="42688625-4B48-79AD-A8D5-392E82FE50CF">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>2A7D63C3-603E-75D6-5698-6562C6699716</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nom_demandante" id="D4419351-CF6A-1E27-89C8-86B475D08BE3">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>9C54572E-504D-9987-35C8-AE430DBD750F</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apell_demandant" id="7A84B919-699C-0A93-28F9-DB09A1808EF8">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>5C376CE0-D90C-A6D5-1D5C-F622C62D9C1F</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="72B0A774-44CD-C0BD-80FD-23B14E6CA121">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>FF5AE1B5-52D6-495C-5826-86A88E8C2D87</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="9F37660F-BFF4-F3AE-A1BA-DF328BC0A66B">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>33FFA24D-DA4A-3DB3-98C6-A3D94632F02A</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="5D1844E6-C143-3F06-6979-5931501029C0">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>1462BF78-1674-1FF5-2293-ACE522B74166</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechaNaci" id="DFA58E91-181B-4421-2540-9BCF33240737">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>30F98AC9-560F-B7E4-4787-404F2A457123</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="genero" id="AC4CF570-00F6-407C-E731-2FF82F6597E8">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>C36FC56B-FCD9-3518-E9A3-2567B4983290</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gen_id_gen" id="08282EDB-4781-9079-9DFB-A3F7C9975667">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>EF6510AD-F56B-64D2-FA54-8DD5E4A49F79</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BE18FE2C-B706-3E21-34AC-BFA2CE626466" referredColumn="7997B4BD-DEFA-097F-AF41-1E8D56EE1A52"/>
+</associations>
+</Column>
+<Column name="proc_demte_proc_dete_ID" id="3E83FC77-4080-C2D7-64F0-B4BE16372E8E">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3E957F6E-7CFA-F73F-9B7B-B5861219BA4F" referredColumn="3459F1C6-A367-487F-F496-EDCB9E6BDF33"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0E5F82BE-1553-0CCA-CD88-6AE86B531292" name="demte_PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>0FE5254D-2E20-E635-E2C0-D8DAFBBFB335</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42688625-4B48-79AD-A8D5-392E82FE50CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="23347BB4-06D0-7CAB-6D1E-F9F3A2D11429" name="demte_gen_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>2C57C13B-C424-5832-40C9-15651353159E</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="08282EDB-4781-9079-9DFB-A3F7C9975667"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F485A717-4259-D98E-491C-80639C7971A4" name="demte_proc_demte_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>79EDBC27-093A-0495-7DD4-D6F07D8680D6</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E83FC77-4080-C2D7-64F0-B4BE16372E8E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

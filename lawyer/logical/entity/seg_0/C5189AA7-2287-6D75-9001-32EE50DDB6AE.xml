@@ -1,0 +1,245 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C5189AA7-2287-6D75-9001-32EE50DDB6AE" name="proceso">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:38:02 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_radicado" id="43223C25-A329-050E-1488-C3235FCE8B11">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:38:18 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_demandado" id="4B853E1E-69CF-ADE1-8B3E-BAD5100376D3">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:38:37 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_demandadnte" id="590F4860-10D3-8A3C-573B-8860E41A27A6">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:39:12 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="asunto" id="8A8AAADE-74DB-8280-A33D-25EBFE408839">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:39:31 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_estado" id="310B234F-DB4C-1F8B-E231-88EE5F07EDA1">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:42:21 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_tipo_Proceso" id="4193F32B-5D61-D053-B89D-CB9BE2C54A5A">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:43:11 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_departamento" id="2F36C847-639B-F683-6A02-531A113642CA">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:44:40 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha_inicial" id="A2B97CB7-5F29-0A26-5D6D-A4FC2AF76A41">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:47:25 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_juzgado" id="65A11B5E-0B68-ADD5-5D58-3C7A54BE497E">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:48:14 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_abogado" id="F046E2C0-6344-636D-7C7D-05F8D73D30A7">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 02:52:04 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_expediente" id="2FFBDAED-E7C1-28DB-777A-DA5A8779373B">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:23:07 UTC</createdTime>
+<generatorID>A608525B-7645-26A8-8F87-52EB038B902E</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<referedAttribute>8503F2F4-F3DE-56C5-7F93-278A9012BEA9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_municipio" id="264A25BD-D8F9-0FAC-B359-44D2FDDBE0A4">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:23:39 UTC</createdTime>
+<generatorID>0FE52C91-75DC-BB2F-6910-FC31ACE11128</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<referedAttribute>4405070D-E15C-16E4-541B-ACFF74164F96</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cedula_abogado" id="0F13D60A-8DF0-F3D9-7DB1-3E8599F4DC0C">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:24:54 UTC</createdTime>
+<generatorID>1A7B1C77-10D7-8B22-7B27-1135B7726BA9</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<referedAttribute>17D776EC-B18F-5C25-3BBD-0CD946F966B1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_proceso" id="871B7C49-049D-BF5E-E1C8-F4B289A8D06E">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:28:52 UTC</createdTime>
+<generatorID>492340B6-E6C1-3878-7F46-4E947DED7490</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<referedAttribute>271C4B51-56BB-D719-67EF-D04D2E80F0EC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_estado1" id="860D72A5-23A8-CA21-790A-F2B55531D9DD">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:29:36 UTC</createdTime>
+<generatorID>5A400239-D40B-2D55-AB86-138F62D59A79</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<referedAttribute>EAB24154-443C-82D3-B207-90C46000BCD0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3FC05E85-63DB-8F10-02E6-A34A503F574E" name="proceso PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:38:34 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="21690F83-A36D-AB88-0C44-ECF651832FCB" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>43223C25-A329-050E-1488-C3235FCE8B11</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D22674D9-8A3F-628B-2657-578FC109A59D" containerWithKeyObject="ADE56F08-BE4A-FD20-82A5-E2A4B912F377" localFKIndex="6ACCEBD5-D839-2B10-F124-62314404C1C0" name="pro_ti_pro_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>492340B6-E6C1-3878-7F46-4E947DED7490</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<referredTableLongName>tipo_proceso</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2DA4CD7F-B0A8-0674-F7E4-512512E7A8C8</referredTableID>
+<keyObject>BED8C20D-DB22-7D70-F0FF-31E3F43C020F</keyObject>
+<referredKeyID>BED8C20D-DB22-7D70-F0FF-31E3F43C020F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_proceso</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

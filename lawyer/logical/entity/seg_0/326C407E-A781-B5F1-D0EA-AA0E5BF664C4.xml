@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="326C407E-A781-B5F1-D0EA-AA0E5BF664C4" name="estado_proc">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 03:56:48 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_estado" id="EAB24154-443C-82D3-B207-90C46000BCD0">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 03:56:57 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nomb_est_proc" id="5F89E624-3209-39A3-A501-8DFE68630F04">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 03:57:14 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="39BC114D-4ED8-FDF1-1187-60CD0AAFA677" name="estado_proc PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 03:57:11 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EAB24154-443C-82D3-B207-90C46000BCD0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

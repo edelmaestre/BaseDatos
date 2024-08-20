@@ -1,0 +1,338 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ADE56F08-BE4A-FD20-82A5-E2A4B912F377" name="proceso">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>C5189AA7-2287-6D75-9001-32EE50DDB6AE</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_radicado" id="16FB9FB7-B7BA-CAFB-4D79-B83FAA22DA4A">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>43223C25-A329-050E-1488-C3235FCE8B11</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_demandado" id="7F238889-DDBB-FE90-A098-CE1F513B2129">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>4B853E1E-69CF-ADE1-8B3E-BAD5100376D3</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_demandadnte" id="7CE2DCAC-DBA1-A4B7-56BC-CB930BE82226">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>590F4860-10D3-8A3C-573B-8860E41A27A6</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="asunto" id="4532678B-56B1-98B2-B353-D296361E817E">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>8A8AAADE-74DB-8280-A33D-25EBFE408839</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_estado" id="204B3C0D-75AD-9A53-BB6F-EC396FC0499A">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>310B234F-DB4C-1F8B-E231-88EE5F07EDA1</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_tipo_Proceso" id="CB6B8AAE-1AA9-B2B1-5208-61580BE2AF21">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>4193F32B-5D61-D053-B89D-CB9BE2C54A5A</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_departamento" id="1E655AB8-8C8F-D553-2D2F-0806D358A1D2">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>2F36C847-639B-F683-6A02-531A113642CA</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_inicial" id="B7AC4DFC-A004-A7B0-2BC7-90E4903C65AB">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>A2B97CB7-5F29-0A26-5D6D-A4FC2AF76A41</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_juzgado" id="880CB05C-ACE2-243C-06EB-3689FC208F32">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>65A11B5E-0B68-ADD5-5D58-3C7A54BE497E</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_abogado" id="2FE963F2-4ECB-7A3C-DA6D-0759CA1F3547">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>F046E2C0-6344-636D-7C7D-05F8D73D30A7</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ex_id_ex" id="EDAA7228-8C23-89B3-309A-F9572F7FF49D">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>2FFBDAED-E7C1-28DB-777A-DA5A8779373B</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="11106A8F-1FD4-A3D0-0CBA-146EB64049BE" referredColumn="ECC9E564-FA7B-B694-8A3E-068A143FF31D"/>
+</associations>
+</Column>
+<Column name="mu_id_mun" id="386878B4-1CAE-3615-8043-1831B1179F69">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>264A25BD-D8F9-0FAC-B359-44D2FDDBE0A4</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1DCB0992-5822-9D16-AB30-CA765593EFA6" referredColumn="2A84D211-22D9-A3B4-2917-3CE130DD405E"/>
+</associations>
+</Column>
+<Column name="abo_ce_abo" id="49B204C6-793D-03DE-CC4F-584A93A9AFBC">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>0F13D60A-8DF0-F3D9-7DB1-3E8599F4DC0C</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="910CD1EB-40FE-D77F-B848-A5F84B66D6B3" referredColumn="3CB55714-59A6-FFB3-4622-95B5865174D2"/>
+</associations>
+</Column>
+<Column name="ti_pr_id_pro" id="57E437B3-EB7E-A738-ABAC-4A5FB0AF9F1D">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>871B7C49-049D-BF5E-E1C8-F4B289A8D06E</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D22674D9-8A3F-628B-2657-578FC109A59D" referredColumn="DA9EE453-0A99-755F-0FFF-0CD7B7C9B94F"/>
+</associations>
+</Column>
+<Column name="es_pro_id_es" id="9EE500D4-5E92-9EDF-50C2-695EC25831C1">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>860D72A5-23A8-CA21-790A-F2B55531D9DD</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="100D69B6-6A40-EB27-ADE8-ECFA2218B880" referredColumn="A3AD3360-0091-2C51-AFE8-B190E7ABEC99"/>
+</associations>
+</Column>
+<Column name="pr_de_pro_dete_ID" id="A49EFBBF-FE46-7FB9-9EA9-DC2CE50AB59E">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="596F28DD-9C29-9760-FAEC-6EA0DE9E9BE0" referredColumn="3459F1C6-A367-487F-F496-EDCB9E6BDF33"/>
+</associations>
+</Column>
+<Column name="pr_dem_pr_dem_ID" id="EBF395EF-0BDF-06F3-0DA9-47AAB90A5DF5">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3729B61D-0275-6F85-01AC-6CB50AAC14C7" referredColumn="19B332A7-A61A-B6BF-CC80-019ADC8F946C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3FC0DEC8-EBC9-0782-A75A-E95225FE0560" name="proc_PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>3FC05E85-63DB-8F10-02E6-A34A503F574E</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16FB9FB7-B7BA-CAFB-4D79-B83FAA22DA4A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C7EFFCAF-21DA-DDCE-ED65-D61D06A234AB" name="pr_ab_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>1A7B1C77-10D7-8B22-7B27-1135B7726BA9</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="49B204C6-793D-03DE-CC4F-584A93A9AFBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A1BFBB8E-E509-64B9-9F62-5E02828F425B" name="pro_est_proc_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>5A400239-D40B-2D55-AB86-138F62D59A79</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9EE500D4-5E92-9EDF-50C2-695EC25831C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="768A2961-0746-5FFC-3B6C-72E606227BC7" name="pr_ex_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>A608525B-7645-26A8-8F87-52EB038B902E</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EDAA7228-8C23-89B3-309A-F9572F7FF49D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EF00FA24-209C-65CC-C8E5-B0702AFC097A" name="pro_muni_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>0FE52C91-75DC-BB2F-6910-FC31ACE11128</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="386878B4-1CAE-3615-8043-1831B1179F69"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B46BF423-59F3-6EAB-4EA7-3A97364D9755" name="pro_proc_dete_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>A151FD9A-0461-BCE8-840F-505BF1D145D6</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A49EFBBF-FE46-7FB9-9EA9-DC2CE50AB59E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C48B0CB3-E4FE-CEC4-B58D-3235AF8B82CF" name="pro_pro_dedo_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>C0A91899-19C2-F0C0-1416-6D023E52E2B7</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EBF395EF-0BDF-06F3-0DA9-47AAB90A5DF5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6ACCEBD5-D839-2B10-F124-62314404C1C0" name="pro_ti_pro_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>492340B6-E6C1-3878-7F46-4E947DED7490</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="57E437B3-EB7E-A738-ABAC-4A5FB0AF9F1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

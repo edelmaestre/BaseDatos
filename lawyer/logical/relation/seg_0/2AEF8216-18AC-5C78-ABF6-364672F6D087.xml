@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="juz_exp" directorySegmentName="seg_0" id="2AEF8216-18AC-5C78-ABF6-364672F6D087">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:21:24 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<sourcePk>AF637803-FEC8-D974-1528-5F9D7C2515FB</sourcePk>
+<targetPk>46D135F7-60ED-70D1-1724-A76B572C3474</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B399A260-C7FB-9BB8-6E0C-78D1174A608C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2D606AFF-73F6-28FB-DB90-137D5F9A175D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

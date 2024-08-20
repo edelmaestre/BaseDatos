@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AA230BFF-4903-71A0-919E-ABE8C767589F" name="usuario">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:30:36 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cedula_abogado" id="20A8DD49-F655-55F2-2B5A-1BE255BB42E4">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:30:44 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre_usuario" id="B26FF234-C5B7-F71B-88CD-0494ADC25A19">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:31:09 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="password" id="09FF7DE6-1927-60E9-6D68-688B3CB4AF59">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:31:42 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="noUsuario" id="9A953E4C-BA4A-739D-F9EE-93D9DD00F4CA">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:33:02 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F17A0BA6-274D-51A2-727A-4F3CA4C9F650" name="usuario PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:33:26 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9A953E4C-BA4A-739D-F9EE-93D9DD00F4CA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="abog-Lawyer" id="E3B64B7F-A61B-1792-8C6A-B74924E2E957" version="3.5">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-21 23:11:44 UTC</createdTime>
+<ownerDesignName>abog-Lawyer</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E3B64B7F-A61B-1792-8C6A-B74924E2E957</designId>
+</OSDM_Design>

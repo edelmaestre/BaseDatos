@@ -1,0 +1,163 @@
+-- Generado por Oracle SQL Developer Data Modeler 18.4.0.339.1532
+--   en:        2019-07-19 13:19:28 COT
+--   sitio:      Oracle Database 11g
+--   tipo:      Oracle Database 11g
+
+
+
+CREATE TABLE admin (
+    id_admin   INTEGER NOT NULL,
+    password   VARCHAR2(10),
+    nombre     VARCHAR2(30)
+);
+
+ALTER TABLE admin ADD CONSTRAINT admin_pk PRIMARY KEY ( id_admin );
+
+CREATE TABLE detalle_domicilio (
+    id_pedido               INTEGER NOT NULL,
+    id_domicilio            INTEGER,
+    id_producto             INTEGER,
+    cantidad                INTEGER,
+    precio_total            NUMBER,
+    domicilio_id_domicilo   INTEGER NOT NULL,
+    producto_id_producto    INTEGER NOT NULL
+);
+
+ALTER TABLE detalle_domicilio ADD CONSTRAINT detalle_domicilio_pk PRIMARY KEY ( id_pedido );
+
+CREATE TABLE domicilio (
+    id_domicilo                    INTEGER NOT NULL,
+    nombrecliente                  VARCHAR2(30),
+    direccion                      VARCHAR2(10),
+    nombre_producto                VARCHAR2(20),
+    precio                         NUMBER,
+    cantidad                       INTEGER,
+    restaurante_id_restaurante     INTEGER NOT NULL,
+    tarjeta_credito_no_tarj_cred   VARCHAR2(20) NOT NULL,
+    celular                        VARCHAR2(10)
+);
+
+ALTER TABLE domicilio ADD CONSTRAINT domicilio_pk PRIMARY KEY ( id_domicilo );
+
+CREATE TABLE mesa (
+    no_mesa          INTEGER NOT NULL,
+    disponibilidad   INTEGER
+);
+
+ALTER TABLE mesa ADD CONSTRAINT mesa_pk PRIMARY KEY ( no_mesa );
+
+CREATE TABLE producto (
+    id_producto       INTEGER NOT NULL,
+    nombre_producto   VARCHAR2(20),
+    costo             INTEGER,
+    cantidad          INTEGER
+);
+
+ALTER TABLE producto ADD CONSTRAINT producto_pk PRIMARY KEY ( id_producto );
+
+CREATE TABLE reserva (
+    id_reserva                     INTEGER NOT NULL,
+    nombre                         VARCHAR2(30),
+    cantidad_mesa                  INTEGER,
+    restaurante_id_restaurante     INTEGER NOT NULL,
+    tarjeta_credito_no_tarj_cred   VARCHAR2(20) NOT NULL,
+    mesa_no_mesa                   INTEGER NOT NULL,
+    fecha                          DATE
+);
+
+ALTER TABLE reserva ADD CONSTRAINT reserva_pk PRIMARY KEY ( id_reserva );
+
+CREATE TABLE restaurante (
+    id_restaurante            INTEGER NOT NULL,
+    nombre                    VARCHAR2(20),
+    admin_id_admin            INTEGER NOT NULL,
+    cantidad_mesas_disp       INTEGER,
+    cantidad_mesas_ocupadas   INTEGER
+);
+
+ALTER TABLE restaurante ADD CONSTRAINT restaurante_pk PRIMARY KEY ( id_restaurante );
+
+CREATE TABLE tarjeta_credito (
+    no_tarj_cred        VARCHAR2(20) NOT NULL,
+    cvv                 INTEGER,
+    fecha_vencimiento   DATE
+);
+
+ALTER TABLE tarjeta_credito ADD CONSTRAINT tarjeta_credito_pk PRIMARY KEY ( no_tarj_cred );
+
+ALTER TABLE detalle_domicilio
+    ADD CONSTRAINT detalle_domicilio_domicilio_fk FOREIGN KEY ( domicilio_id_domicilo )
+        REFERENCES domicilio ( id_domicilo );
+
+ALTER TABLE detalle_domicilio
+    ADD CONSTRAINT detalle_domicilio_producto_fk FOREIGN KEY ( producto_id_producto )
+        REFERENCES producto ( id_producto );
+
+ALTER TABLE domicilio
+    ADD CONSTRAINT domicilio_restaurante_fk FOREIGN KEY ( restaurante_id_restaurante )
+        REFERENCES restaurante ( id_restaurante );
+
+ALTER TABLE domicilio
+    ADD CONSTRAINT domicilio_tarjeta_credito_fk FOREIGN KEY ( tarjeta_credito_no_tarj_cred )
+        REFERENCES tarjeta_credito ( no_tarj_cred );
+
+ALTER TABLE reserva
+    ADD CONSTRAINT reserva_mesa_fk FOREIGN KEY ( mesa_no_mesa )
+        REFERENCES mesa ( no_mesa );
+
+ALTER TABLE reserva
+    ADD CONSTRAINT reserva_restaurante_fk FOREIGN KEY ( restaurante_id_restaurante )
+        REFERENCES restaurante ( id_restaurante );
+
+ALTER TABLE reserva
+    ADD CONSTRAINT reserva_tarjeta_credito_fk FOREIGN KEY ( tarjeta_credito_no_tarj_cred )
+        REFERENCES tarjeta_credito ( no_tarj_cred );
+
+ALTER TABLE restaurante
+    ADD CONSTRAINT restaurante_admin_fk FOREIGN KEY ( admin_id_admin )
+        REFERENCES admin ( id_admin );
+
+
+
+-- Informe de Resumen de Oracle SQL Developer Data Modeler: 
+-- 
+-- CREATE TABLE                             8
+-- CREATE INDEX                             0
+-- ALTER TABLE                             16
+-- CREATE VIEW                              0
+-- ALTER VIEW                               0
+-- CREATE PACKAGE                           0
+-- CREATE PACKAGE BODY                      0
+-- CREATE PROCEDURE                         0
+-- CREATE FUNCTION                          0
+-- CREATE TRIGGER                           0
+-- ALTER TRIGGER                            0
+-- CREATE COLLECTION TYPE                   0
+-- CREATE STRUCTURED TYPE                   0
+-- CREATE STRUCTURED TYPE BODY              0
+-- CREATE CLUSTER                           0
+-- CREATE CONTEXT                           0
+-- CREATE DATABASE                          0
+-- CREATE DIMENSION                         0
+-- CREATE DIRECTORY                         0
+-- CREATE DISK GROUP                        0
+-- CREATE ROLE                              0
+-- CREATE ROLLBACK SEGMENT                  0
+-- CREATE SEQUENCE                          0
+-- CREATE MATERIALIZED VIEW                 0
+-- CREATE MATERIALIZED VIEW LOG             0
+-- CREATE SYNONYM                           0
+-- CREATE TABLESPACE                        0
+-- CREATE USER                              0
+-- 
+-- DROP TABLESPACE                          0
+-- DROP DATABASE                            0
+-- 
+-- REDACTION POLICY                         0
+-- 
+-- ORDS DROP SCHEMA                         0
+-- ORDS ENABLE SCHEMA                       0
+-- ORDS ENABLE OBJECT                       0
+-- 
+-- ERRORS                                   0
+-- WARNINGS                                 0

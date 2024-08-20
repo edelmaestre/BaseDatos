@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="proc_demando_demando" directorySegmentName="seg_0" id="F9E9AB59-6C22-D67A-D7DA-BF481413E2F7">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:31:01 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1EBEF8FF-02D7-CC4D-6416-A27A86E3CCC5</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9BCBE445-F06D-531D-2D4D-55F1DB1D1E9B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

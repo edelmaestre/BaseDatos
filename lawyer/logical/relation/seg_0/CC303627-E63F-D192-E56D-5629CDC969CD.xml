@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="usu_abog" directorySegmentName="seg_0" id="CC303627-E63F-D192-E56D-5629CDC969CD">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:25:10 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<sourcePk>F17A0BA6-274D-51A2-727A-4F3CA4C9F650</sourcePk>
+<targetPk>2B6345EE-6C3F-D2FD-E277-21B418DE06B7</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>AA230BFF-4903-71A0-919E-ABE8C767589F</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>43A4384E-A357-E542-4CD8-61DC22EF5DE8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

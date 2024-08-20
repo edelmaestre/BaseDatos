@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="proc_dmte_demte" directorySegmentName="seg_0" id="79EDBC27-093A-0495-7DD4-D6F07D8680D6">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:35:15 UTC</createdTime>
+<ownerDesignName>lawyer</ownerDesignName>
+<engineerTo>
+<item key="41E58391-B201-54DC-28E6-115A029AD265" value="true"/>
+</engineerTo>
+<targetPk>0FE5254D-2E20-E635-E2C0-D8DAFBBFB335</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A7968931-C1B3-B04E-6A09-60A052B55BC7</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3F4240D4-BFE0-EBF2-6A7A-7841B29C4B66</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

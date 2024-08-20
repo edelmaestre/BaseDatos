@@ -1,0 +1,90 @@
+-crear tablespace alumno de 5o mb
+-crear usuario propietario de esquema
+-asignar privilegios
+
+-tablas facultad y programas
+-ingresar datos
+
+-tarea:
+--crear modelo completo de alumnos
+--crear un txt que se llame crear esquemas
+        -crear tablespace
+        -crear usuario
+        -asignar provilegios
+--crear segundo archivo crear tablas.txt 
+	-sentecias para crear tablas
+	-crear llaves primarias
+	-foraneas regla de checheo y valores por defecto
+	
+--crear 3 archivo insertar datos.txt 
+	-insercion de datos (inserts de cada una de las tablas que 	pertenecen al esquema)
+	-
+	
+
+
+
+
+----------------------------------------------------------------------------------------------
+13/nov/2019
+Datafile (almacena datos de forma física)
+select name from v$datafile;
+para ver los datafile
+
+
+-oracle tiene un tablespace que es algo lógico es el area logica mas grande de almacenamiento que tiene oracle para almacenar datos, un tablespace tiene minimo un data file
+el areaminima es un bloque y no lo deja modificar
+
+- select user from dual;
+-- para ver usuarios conectados
+
+--crear datafile (tablespace)
+create tablespace clase03 Datafile 'C:\APP\EDAMA\PRODUCT\18.0.0\ORADATA\XE\XEPDB1\clase03.dbf' size 50M;
+
+
+-esto es para ver el tablespace
+select * from V$tablespace;
+
+-crear un usuario
+create user edel identified by edel default tablespace clase03 temporary tablespace temp;
+
+-para saber donde estoy parado si en la xe o xepdb1; 
+show con_name;
+
+-conectar usuario creado
+connect edel/edel@localhost:1521/xepdb1;
+
+-para ver los privilegios
+select * from system_privilege_map;
+
+-para asignar privilegios a un usuario (esto debe ser desde el system)
+grant CREATE SESSION, CREATE ANY TABLE TO edel;
+
+
+--le agregamos los privilegios
+grant all privileges to edel;
+
+-- ver tablas del ususraio
+SELECT DISTINCT TABLE_NAME FROM ALL_ALL_TABLES WHERE OWNER LIKE 'EDEL';
+
+----MODIFICABDO LA ESTRUCTURA DE LA TABLA Facultad, ADICIONANDOLE UN NUEVO ATRIBUTO LLAMADO ... tipo de datos sysdate 
+
+ALTER TABLE programas ADD codfacultad varchar2(3); 
+
+//AGREGAR PRIMARIAS
+
+ALTER TABLE ALUMNO ADD  constraint pk_CEDALUM PRIMARY KEY(CEDULA);
+
+//Agregar llaves foraneas
+ALTER TABLE alumno ADD constraint fk_Alum_Ciu foreign key (codigo_ciudad) references ciudad(codigo_ciudad);
+
+--MODIFICANDO LA TABLA FACULTAD NOMBREFAC
+ALTER TABLE programas MODIFY(nombrefac varchar2(30) not null);
+
+--Modificar una tabla para añadir un atributo
+ALTER TABLE ciudad ADD poblacion number(15);
+
+
+controlfile
+
+	
+

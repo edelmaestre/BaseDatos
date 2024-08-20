@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="056E3444-2FAA-01DB-D871-EF0F76A4AD25" name="expediente">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>2D606AFF-73F6-28FB-DB90-137D5F9A175D</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_expediente" id="ECC9E564-FA7B-B694-8A3E-068A143FF31D">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>8503F2F4-F3DE-56C5-7F93-278A9012BEA9</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_radicado" id="DCA413EA-387D-5D81-C7A9-9AFAD94DA615">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>0A9BD363-1775-30E5-7B33-89AC817102E3</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Juz_id_juz" id="F804D419-3429-DD8F-86C3-D4CA0C3D980F">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>87477E99-B9EF-2A73-0DBF-98FEF0762218</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="10C960AC-35F8-5042-F26F-AF18C811F4BE" referredColumn="EDAC6EC5-A208-A9F3-E756-C5318A88D389"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E0B00CFD-CDB2-26C6-5751-C7DFFC87B96A" name="exped_PK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>46D135F7-60ED-70D1-1724-A76B572C3474</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ECC9E564-FA7B-B694-8A3E-068A143FF31D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="987CE379-6B9D-5EAD-560C-2B5B448E9927" name="exp_Juz_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>2AEF8216-18AC-5C78-ABF6-364672F6D087</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F804D419-3429-DD8F-86C3-D4CA0C3D980F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

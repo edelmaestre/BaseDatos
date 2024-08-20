@@ -1,0 +1,6 @@
+En la ciudad de valledupar tiene como sede principal la universidad popular del cesar esta cuenta estudiantes de alrededor de 20000 
+esto incluyendo las sedes que existe en la sede de aguachica. La universidad ofrece diferentes carreras por la cualaes el estudiante puede optar PARA SU GRADO. 
+Es importante anotar que estas carreras estan asociadas o hacen parte de una facultad que claramente están divididas por areas de educacion (salud, ingenierias, administrativas, y las matemáticas)
+Claramente el estudiante para obtener el grado debe superar la totalidad de creditos de la carrera que está cursando, estos creditos se van acumulando a medida que semestre a semestre el estudiante valla superando las materias. de todos estos estudiantes se es preciso conocer el lugar de donde provienen. la etnia a la cual pertenecen, su estado actual de la universidad, activo inactivo egresado pfu. 
+como tambien su promedio semestreal (durante toda su carrera) y tambien debe conocerse los promedios ponderados que obtuvo durante toda su carrera.
+Utilizando la herramenta DIA como herramienta para hacer el diseño de mer realizar dicho modelo para el tema propuesto. es preciso anotar que se deben tener en cuenta dodos los elementos para realizar dicho modelo.  

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="100D69B6-6A40-EB27-ADE8-ECFA2218B880" containerWithKeyObject="ADE56F08-BE4A-FD20-82A5-E2A4B912F377" localFKIndex="A1BFBB8E-E509-64B9-9F62-5E02828F425B" name="pro_est_proc_FK">
+<createdBy>edama</createdBy>
+<createdTime>2019-11-22 04:49:43 UTC</createdTime>
+<generatorID>5A400239-D40B-2D55-AB86-138F62D59A79</generatorID>
+<ownerDesignName>lawyer</ownerDesignName>
+<referredTableLongName>estado_proc</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>28E10B92-5576-7662-E80D-8E37E71209BB</referredTableID>
+<keyObject>996C268E-B60A-DF24-1C2A-BA86F82B2B0A</keyObject>
+<referredKeyID>996C268E-B60A-DF24-1C2A-BA86F82B2B0A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_estado</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
