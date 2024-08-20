@@ -1,0 +1,32 @@
+1. SCRIP CONFIGURACION.TXT
+---------------Crear tablespace-----------------------------------
+
+ 		sqlplus/nolog
+		conn system/system
+
+		create tablespace clasedos datafile 'C:/BaseDatos1/clasedos.dbs' size 90m;
+		spool c:\
+
+---------------Crear usuario (s)------------------------------------
+		-create user user 1 identified by  1234 default tablespace clasedos;
+		-create user "dani" identified bye "123" default tablespace "Datos" temporary tablespace tem quota unlimited on datos; (ESTA ES MEJOR) TODO EN UNO
+	
+----------------Crear rol-------------------------------------------
+	
+		DARLE PRIVILEGIO DE INICIAR SECION
+
+			grant create session to "dani" 
+
+		PARA CREAR ROLES VUELVO Y ME CONECTO AL SYSTEM 
+
+			create role desarrollo;
+
+		>LE DOY PRIVILEGIOS A ESE ROL
+
+			grant create sequence,create session,create sysnonym, create table,create view to desarrollo;
+
+		>DESPUES LE ASIGNO ESE ROL A MI USUARIO
+
+			grant desarrollo to "dani";
+	asignar permisos rol ------> ya esta arriba
+	asignar rol usuarios ------> ya esta arriba

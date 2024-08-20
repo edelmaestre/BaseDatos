@@ -1,0 +1,21 @@
+para llamar una funcion se hace asi
+Set serveroutput on
+BEGIN
+DBMS_OUTPUT.PUT_LINE(funciones.mostrar_domicilio(312));
+END;
+-------------------------------------------------------------------
+para llamar un procedimiento es asi pero en paquete 
+
+BEGIN
+EJEMPLO1.POBLACION;
+END;
+
+EJEMPLO1---> SE LLAMA EL PAQUETE
+POBLACION ---> SE LLAMA EL CUERPO
+
+UPDATE CIUDAD SET POBLACION= 2000000 WHERE COD_CIUDAD= 538;
+-------------------------------------------------------------
+procedimiento
+begin 
+agregarReserva('1','dani','09/09/2019');
+end;

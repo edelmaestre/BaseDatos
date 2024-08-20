@@ -1,0 +1,29 @@
+-plsql
+-sql
+
+
+-16 de julio martes hacemos talleres de ejercicios propuestos en clases.
+-(funciones y disparadores para la poblacion, procedimientos y disparadores)
+-(viernes sustentacion presentacion)
+-martes tablero entregar el ensayo a mano 5 temas de tutorial.com hablar del ensayo
+https://www.tutorialspoint.com/
+
+
+.. en la primera pagina Categorica 
+-machine learning
+-pyton
+-mongodb
+-bigdata analitic y hadoop
+
+...ver el video de la pag del profe
+
+
+
+-se debe hacer el modelo para los promedios.
+-ejercicio de los primedios.
+-ejercicio de los productos.
+- estudiar tablas mutantes(saldra en el parcial).
+
+
+
+...performance es el redimiento del equipo

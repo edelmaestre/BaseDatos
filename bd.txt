@@ -1,0 +1,43 @@
+script1 configuraciòn.txt
+-crea tablespace
+-crea usuario
+-crea rol
+-asigna permisos
+-asigna rol usuario
+
+scrip2 crear esquema.txt
+-creacion de todas las tablas
+-creacion de llaves (primarias, naturales o artificiales) alter
+-creacion de llaves foraneas (fK alter)
+-creacion dereglas de chequeo, asignacion de valor por defecto para atributos.
+-creacion de secuencias
+-creacion de sinonimos( cuando halla mas de un usuario)
+
+
+script 3 Insertar datos.txt
+- insertar los datos tabla por tabla que tiene el esquema
+ Nota: utilizar secuancia por llaves subrogadas.
+
+ejemplo secuencia (insert into  prueba (contador) values (secuencia.nextval);
+
+nota: 
+
+
+
+------------- procecdimiento o disparadir que actualiza la poblacion  ---- AVERIGUAR TABLA MUTANTE----
+
+3 DISPARADORES
+
+tarea 2 dentro de 8 dias viernes 12va a llegar a las 11 y media
+grupo de trabajo 8 minutos
+modelo fìsico
+mer, logico, introduccion, objetivos, 
+
+alter para cada tabla
+una reglo de chequeo
+
+
+
+realacional 
+
+disparadores (min 2) funciones(min2 ) con paquetes invocar a traves del  

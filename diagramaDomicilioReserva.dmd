@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="diagramaDomicilioReserva" id="CA474B78-30A4-FFF6-A76B-0355A13BD6A5" version="3.5">
+<createdBy>edama</createdBy>
+<createdTime>2019-05-01 02:25:41 UTC</createdTime>
+<ownerDesignName>daniela</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>CA474B78-30A4-FFF6-A76B-0355A13BD6A5</designId>
+</OSDM_Design>

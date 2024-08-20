@@ -1,0 +1,88 @@
+2. SCRIP CREAR ESQUEMA.TXT
+------------Creacion de todas las tablas-----------------------------
+
+create table Alumno (cedula_est varchar2(11), nombre varchar2(15), apellido varchar2(15), Cod_etnia varchar2(6), estado varchar(10), cod_ciudad varchar2(8));
+
+create table Etnia (cod_etnia varchar2(6), nombre_etnia varchar2(10));
+
+create table carreras (cod_carrera varchar2(10), nombre_carrera varchar2(20), numero_credito varchar2(3));
+
+create table ciudad (cod_ciudad varchar2(8), nombre_ciudad varchar2(20), poblacion varchar2(7));
+
+create table departamento (cod_departamento varchar2(10), nombre_departamento varchar2(20), poblacion varchar2(7));
+
+create table Materias(cod_materia varchar2(10), nombre_materia varchar2(15), credito varchar2(2));
+
+create table facultad (cod_facultad varchar2(10), nombre_facultad varchar2(20));
+
+create table profesores (cod_profe varchar2(11), nombre_prof varchar2(15) );
+
+
+
+------------Creacion de llaves (naturales y/o artificiales) --> alter---------------------
+alter table alumno add primary key (cedula_est);
+alter table etnia add primary key (cod_etnia);
+alter table ciudad add primary key (cod_ciudad);
+alter table departamento add primary key (cod_departamento);
+alter table carreras add primary key (cod_carrera);
+alter table materias add primary key (cod_materia);
+alter table facultad add primary key (cod_facultad);
+alter table profesores add primary key (cod_profe);
+alter table nota add primary key (nota_id);
+
+
+------------Creacion de llaves foranear --> alter------------------------------------------
+
+--------------------------------------------------------
+ Ref Constraints for Table NOTAS
+--------------------------------------------------------
+
+  ALTER TABLE NOTA ADD CONSTRAINT FK_NOTAS_ALUMNO FOREIGN KEY (cedula_est)
+	  REFERENCES alumno (cedula_est) ENABLE;
+
+  ALTER TABLE NOTA ADD CONSTRAINT FK_NOTA_MATERIA FOREIGN KEY (cod_materia)
+	  REFERENCES materias (cod_materia) ENABLE;
+
+--------------------------------------------------------
+ Ref Constraints for Table ALUMNO
+--------------------------------------------------------
+
+  ALTER TABLE ALUMNO ADD CONSTRAINT FK_ALUMNO_ETNIA FOREIGN KEY (cod_etnia)
+	  REFERENCES etnia (cod_etnia) ENABLE;
+
+  ALTER TABLE ALUMNO ADD CONSTRAINT FK_ALUMNO_CIUDAD FOREIGN KEY (cod_ciudad)
+	  REFERENCES ciudad (cod_ciudad) ENABLE;
+
+  ALTER TABLE ALUMNO ADD CONSTRAINT FK_ALUMNO_CARRERA FOREIGN KEY (cod_carrera)
+	  REFERENCES carreras (cod_carrera) ENABLE;
+
+--------------------------------------------------------
+  Ref Constraints for Table CIUDAD
+--------------------------------------------------------
+  ALTER TABLE ciudad ADD constraint fk_CIU_DEP foreign key (cod_departamento) references departamento(cod_departamento);
+
+--------------------------------------------------------
+  Ref Constraints for Table CARRERA
+--------------------------------------------------------
+  ALTER TABLE carreras ADD constraint fk_CAR_FACU foreign key (cod_facultad) references facultad(cod_facultad) enable;
+
+--------------------------------------------------------
+ Ref Constraints for Table MATERIA
+--------------------------------------------------------
+  ALTER TABLE materias ADD constraint fk_materia_prof foreign key (cod_profe) references profesores(cod_profe) enable;
+
+  ALTER TABLE materias ADD constraint fk_materia_carrera foreign key (cod_carrera) references carreras(cod_carrera) enable;
+
+
+-----------------Creacion de llaves de chequeo, asignacion de valores por defecto para atributo------------------
+
+------------------Creacion secuencia-----------------------------------------------
+
+-------------------Creacion de sinonimo (para cuando haya mas de un usuario)--------------------------------------
+
+luego de haber creado el usu1, nos conectamos con el system y de hay le damos privilegfios de synonnym
+		create public synonym al for alumno (alumno es la tabla CREO)
+
+luego desde usu1 
+		create public synonym alumno for usu1.alumno
+		grant select on alumno to usu2; 

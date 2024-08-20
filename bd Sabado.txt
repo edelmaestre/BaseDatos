@@ -1,0 +1,27 @@
+1.) funcion mantener la poblacion actualizada.
+2.) trigger
+3.) sacar promedio ponderado semestre. (el promedio semestral se almacena ... creartabla promedio que tenga los datos de los semestres
+
+-gerear un tabla promedio.
+-estudiantes
+-periodo.
+-nota promedio
+
+
+
+
+--Promedio ponderado(suma de los promedio de todos los semestre y actualizo en estudiante)
+
+4.) tabla director de proyectos (nombre de todos losdirectores de proyecto)
+-un proyecto solamente puede pertenecer e un director pero un director puede tener varios proyectos
+-atr proy id pry, id director, presupuesto presu puesto, areadel proyecto, sector, (mantener actualizado tanto elsector como el director de proyecto. los proyectos pueden tener 3 estados(activos, suspendido, terminado).
+
+de igual forma el proyecto pertenece a un sector la cual puede ser educativo, electrico, de vivienda, de vias o tecnologías. cada proyecto tiene asignado un presupuesto inicial el cual se supone que costará la obra. Es presiso controlar el estado de cada proyecto (ejecucion) cuando el total de los pagos sea menor al total presupuestado .
+(suspendido) por una causa tiene un valor de entrada siempre y cuando su valor de entrada sea igual 
+ 
+..(terminado) cuando el total de los pagos sea igual al del presupuesto  (atr. fecha, cuota, id).
+
+5. actualice la definitiva de una nota
+6. 
+si tengo una tabla productos y la tabla productos tiene un id_productos 
+--los insert a traves de un procedimiento y los procedimientos pertenecen al paquete.

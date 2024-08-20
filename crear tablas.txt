@@ -1,0 +1,160 @@
+//ver usuarios 
+select username from all_user;
+select 
+
+//nos conectamos al system
+conn system/1234
+
+//creamos el usuario 
+CREATE USER maestre IDENTIFIED BY edel DEFAULT TABLESPACE DATOS TEMPORARY  TABLESPACE TEMP PROFILE DEFAULT QUOTA UNLIMITED ON DATOS;
+
+//le agregamos los privilegios
+grant all privilege to maestre;
+
+// nos coneptamos al usuario creado
+connect maestre/edel@localhost:1521/xepdb1;
+
+//CREAMOS LAS TABLAS
+create table alumno (cedula varchar2(12) primary key, nombre varchar2(20),apellido varchar2(20), codigo_ciudad number(8), codigo_etnia varchar2(12), codigo_carrera varchar2(12));
+
+create table ciudad (codigo_ciudad number(8) primary key, nombre_ciudad varchar2(20), codigo_departamento number(12));
+
+create table departamento (codigo_departamento number(12) primary key, nombre_departamento varchar2(20));
+
+create table carrera (codigo_carrera varchar2(12) primary key, nombre_carrera varchar2(20), numero_credito varchar2(20), codigo_facultad varchar2(12));
+
+create table materia (codigo_materia varchar2(12) primary key, nombre_materia varchar2(20), numero_credito_materia varchar2(20), codigo_carrera varchar2(12), codigo_profesor varchar2(12));
+
+create table facultad (codigo_facultad varchar2(12) primary key, nombre_facultad varchar2(20));
+
+create table profesores (codigo_profesor varchar2(12) primary key, nombre_profesor varchar2(20));
+
+create table etnia (codigo_etnia varchar2(12) primary key, nombre_etnia varchar2(20));
+
+create table nota (codigo_materia varchar2(12),codigo_notas varchar2(12) primary key ,cedula_estudiante varchar2(12), nota_1 float(20), nota_2 float(20),nota_3 float(20), definitiva float(20) ); 
+
+ SELECT DISTINCT TABLE_NAME FROM ALL_ALL_TABLES WHERE OWNER LIKE 'MAESTRE'; // ver tablas del ususraio
+
+//AGREGAR PRIMARIAS
+
+ALTER TABLE ALUMNO ADD  constraint pk_CEDALUM PRIMARY KEY(CEDULA);
+ALTER TABLE CIUDAD ADD  constraint pk_CODCIU PRIMARY KEY(codigo_ciudad);
+ALTER TABLE DEPARTAMENTO ADD  constraint pk_CODDEP PRIMARY KEY(codigo_departamento);
+ALTER TABLE CARRERA ADD  constraint pk_CODCAR PRIMARY KEY(codigo_carrera);
+ALTER TABLE MATERIA ADD  constraint pk_CODMAT PRIMARY KEY(codigo_materia);
+ALTER TABLE FACULTAD ADD  constraint pk_CODFAC PRIMARY KEY(codigo_facultad);
+ALTER TABLE PROFESORES ADD  constraint pk_CODPROF PRIMARY KEY(codigo_profesor);
+ALTER TABLE ETNIA ADD  constraint pk_CODETN PRIMARY KEY(codigo_etnia);
+ALTER TABLE NOTA ADD  constraint pk_CODNOT PRIMARY KEY(codigo_notas);
+
+//Agregar llaves foraneas
+ALTER TABLE alumno ADD constraint fk_Alum_Ciu foreign key (codigo_ciudad) references ciudad(codigo_ciudad);
+ALTER TABLE ciudad ADD constraint fk_CIU_DEP foreign key (codigo_departamento) references departamento(codigo_departamento);
+ALTER TABLE alumno ADD constraint fk_Alum_ETN foreign key (codigo_etnia) references etnia(codigo_etnia);
+ALTER TABLE alumno ADD constraint fk_Alum_CARR foreign key (codigo_carrera) references carrera(codigo_carrera);
+ALTER TABLE carrera ADD constraint fk_CAR_FACU foreign key (codigo_facultad) references facultad(codigo_facultad);
+ALTER TABLE materia ADD constraint fk_MAT_CARR foreign key (codigo_carrera) references carrera(codigo_carrera);
+ALTER TABLE materia ADD constraint fk_MAT_PROF foreign key (codigo_profesor) references profesores(codigo_profesor);
+ALTER TABLE nota ADD constraint fk_NOT_ALUM foreign key(cedula_estudiante) references alumno(cedula);
+ALTER TABLE nota ADD constraint fk_NOT_MAT foreign key(codigo_materia) references materia(codigo_materia);
+
+alter table add, drop, modify, change, rename
+
+atlter add contraint
+
+ SELECT DISTINCT TABLE_NAME FROM ALL_ALL_TABLES WHERE OWNER LIKE 'MAESTRE'; // ver tablas del ususraio
+
+//eliminar tablas
+drop table alumno;
+drop table ciudad;
+drop table departamento;
+drop table carrera;
+drop table materia;
+drop table facultad;
+drop table profesores;
+drop table etnia;
+drop table nota;
+
+//insertando datos
+
+ Datos alumno
+
+ insert into alumno values ('100323358','juan','almenares','12','3','45876');
+insert into alumno values ('1003456789','ana','barros','12','4','09876');
+insert into alumno values ('1003234678','alberto','ramirez','15','5','20986');
+insert into alumno values ('100323890','andres','rojas','18','5','45876');
+insert into alumno values ('1003234567','elkin','tapias','15','3','09876');
+ 
+  Datos Materia
+
+ insert into Materia values ('100423','Base Datos 1','4','10986','10658126543');
+ insert into Materia values ('126789','Calculo Diferencial','4','45876', '10658126543');
+ insert into Materia values ('26789','Ingenieria Economica','2', '45876', 10658126545);
+ insert into Materia values ('23467','Programacion Lineal','3','10986', '10658126543');
+ insert into Materia values ('09876','Ingles 1','2', '09876', '10658126545' );
+
+
+
+ 
+
+ Profesores
+
+insert into profesores values ('10658126543','Andres Colmenares');
+insert into profesores values ('10658126544','Amilkar Sierra');
+insert into profesores values ('10658126545','Gilberto Dulcey');
+insert into profesores values ('10658126546','Roberto Fernandez');
+
+ Datos Carrera
+
+ insert into carrera values ('45876','Ingenieria De sistemas','180', '98763');
+ insert into carrera values ('99876','Ingenieria Ambiental','150', '98763');
+ insert into carrera values ('10986','Ing Electronica','190', '98763');
+ insert into carrera values ('20986','Contaduria','80', '96543');
+ insert into carrera values ('09876','Ing Agroindustrial','110', '98763');
+
+ Datos Notas
+
+ insert into nota values ('100423', '2', '100323358', 3.6, 1.2, 2, 2.2);
+ insert into nota values ('126789', '7', '1003456789', 4.9, 2.8, 2.6, 3.4);
+ insert into nota values ('26789', '1', '1003234678', 2.9, 3.8, 3.9, 3.5);
+ insert into nota values ('23467', '5', '100323890', 4.0, 4.6, 2.1, 3.5);
+ insert into nota values ('09876', '9', '1003234567', 5.0, 2.9, 2, 3.3);
+
+ Datos Facultades
+
+ insert into facultad values ('98763','Ingenierias Y Tecnologicas');
+ insert into facultad values ('34567','Ciencias De La Salud');
+ insert into facultad values ('96543','Ciencias Administrativas Contables Economicas');
+ insert into facultad values ('90876','Arte Y Folclor');
+ insert into facultad values ('78763','Ciencias Basicas Y De Educacion');
+
+ciudad
+insert into ciudad values ('15','Barranquilla','025',120000);
+insert into ciudad values ('12','Valledupar', '026','160000');
+insert into ciudad values ('18','Bucaramanga','098','180000');
+insert into ciudad values ('13','Cali', '090','110000');
+insert into ciudad values ('14','Bogota', '028','15000');
+insert into ciudad values ('16','Santamarta', '091','170000');
+insert into ciudad values ('17','Cartagena', '092', '140000');
+
+Departamento
+insert into departamento values ('025','Atlantico', 0);
+insert into departamento values ('026','Cesar', 0);
+insert into departamento values ('027','Caldas', 0);
+insert into departamento values ('028','Cundinamarca', 0);
+insert into departamento values ('098','Santander', 0);
+insert into departamento values ('090','Valle', 0);
+insert into departamento values ('091','Magdalena', 0);
+insert into departamento values ('092','Bolivar', 0);
+
+
+
+etnias
+
+ insert into etnias values ('1','Mestizo');
+ insert into etnias values ('2','Blanco');
+ insert into etnias values ('3','Indio');
+ insert into etnias values ('4','Mulato');
+ insert into etnias values ('5','Zambo');
+ insert into etnias values ('6','Negro');
+ insert into etnias values ('7','Cuarteron');
